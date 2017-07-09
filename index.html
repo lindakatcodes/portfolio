@@ -1,0 +1,161 @@
+<!doctype html>
+<head>
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300|Lalezar|Amaranth:700|Lato:300i" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styleguide.css">
+</head>
+<body>
+  <div class="container-fluid">
+  <!-- Intro / cover page -->
+    <div id="intro">
+      <div class="spacer"></div>
+      <div class="splash">
+        <h1 class="covername">Linda Thompson</h1>
+        <h2 class="coverdesc">Front end web developer</h2>
+        <a href="#projects" role="button" class="enter btn btn-block btn-success">
+         <span class="glyphicon glyphicon-chevron-down arrow"></span>
+         <span class="glyphicon glyphicon-chevron-down arrow"></span>
+         <span class="glyphicon glyphicon-chevron-down arrow"></span>
+         </a>
+      </div>
+    </div>
+  <!-- Navigation -->
+    <div id="navigation">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navitems">
+          <span class="glyphicon glyphicon-menu-hamburger menubtn"></span>
+          </button>
+          <a class="navbar-brand" href="#intro">
+          <img alt="Brand" class="logo" src="http://jonandlinda.com/codepenphotos/selflogo.png">
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navitems">
+          <ul class="nav navbar-nav navbar-right">
+          <li class="sections"><a href="#projects">Projects</a></li>
+          <li class="sections"><a href="#certs">Certificates</a></li>
+          <li class="sections"><a href="#history">About</a></li>
+          <li class="sections"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  <!-- Projects -->
+  
+    <div class="row spacer2"></div>
+    <div class="row" id="projects">
+      <h2 class="title text-center">Projects</h2>
+      <div class="flag">
+        <div class="flag__image">
+        <img src="http://jonandlinda.com/codepenphotos/localWeatherApp.jpg" alt="Local Weather App">
+        </div>
+        <div class="flag__body">
+          <p>This task asked us to create a weather app where you could see your local weather, have an icon that changes depending on the weather conditions, and toggle between Fahrenheit and Celcius. This is my first program that gathered information from an API. Since we are using Codepen for our code, there was an extra little hoop to jump through to return the data (cross origin/https technicality), but I managed to get it working without too much trouble. The thing that honestly gave me the most difficulty with this task was the weather icons. I found a set that I liked better than the ones that came with the Open Weather Map API, and it sounded easy to set up. Famous last words, right? It took a lot of tweaking and frustration, and it's still not as clean/perfect as I would like (the spacing is still off and the layered icons don't always line up exactly how I'd like), but it's a lot closer to what I had in mind. The background colors of the labels also change depending on the time of day and the type of the weather. This project is viewable <a href="https://codepen.io/lindakatcodes/full/VKPGrk/" target="_blank">here.</a></p>
+        </div>
+      </div>
+
+        <div class="flag">
+        <div class="flag__image">
+        <img src="http://jonandlinda.com/codepenphotos/randquotegen.jpg" alt="Random Quote Generator">
+        </div>
+        <div class="flag__body">
+          <p>For the Free Code Camp curriculum, we were tasked with creating a random quote generator. I created a list in another pen of quotes that I wanted to use, and linked that pen to my generator to cycle through the quotes. This task helped me learn more about Javascript functions, including setting up a way to cycle through quotes and colors, ensuring selections weren't immediately repeated, and setting up a Twitter button and how to select where and how a post would end if it was too long for a tweet. It also gave me an inital idea of how to access information from a different source. This project is viewable <a href="https://codepen.io/lindakatcodes/full/kkPzbY/" target="_blank">here.</a></p>
+        </div>
+      </div>
+
+      <div class="flag">
+        <div class="flag__image">
+          <img src="http://jonandlinda.com/codepenphotos/deliveryformfinal.jpg" alt="Delivery Form">
+        </div>
+        <div class="flag__body">
+          <p>This project came about because I wanted a number pad for a form. I track delivery locations and invoice numbers in my current position, and I had been using a Google form to input this information into a spreadsheet. However, the form didn't have much I could really customize. By creating my own form, I could get the number keypad I so badly wanted, I could stay on the same page once I had entered the information (using a small alert to show it had been logged into the spreadsheet), and I could control the look more.</p>
+        </div>
+      </div>
+
+      <div class="flag">
+        <div class="flag__image">
+        <img src="http://jonandlinda.com/codepenphotos/logofinal.jpg" alt="Logolinks site">
+        </div>
+        <div class="flag__body">
+          <p>Logolinks was my final project for CS50, Harvard's intro to computer science class given through edX. My partner had told me he'd always wanted a place where he could store links for easy access, similar to bookmarks but a different way of viewing them, where it was easier to copy the links and share them with others. This was what I came up with. This project is viewable <a href="http://logolinks.jonandlinda.com" target="_blank">here.</a></p>
+        </div>
+      </div>
+
+      <div class="flag">
+        <div class="flag__image">
+          <img src="http://jonandlinda.com/codepenphotos/GPBCOrderForm.jpg" alt="Business Card Order Form">
+        </div>
+        <div class="flag__body">
+          <p>For my first project, I created a business card order form for a company client. They had been sending their orders to us through fax, and had requested a way to be able to email us the information. I volunteered myself and created this, which emails the form information to our sales department. They have been very pleased with it, simple as it is.</p>
+        </div>
+      </div>
+
+    </div>
+  <!-- Certificates -->
+  <div class="row" id="certs">
+    <h2 class="title text-center">Certificates</h2>
+    <div class="docs">
+      <img class="img-responsive" src="http://jonandlinda.com/codepenphotos/HarvardX-CS50-Certificate-edX.jpg">
+    </div>
+  </div>
+  <!-- Self history -->
+    <div class="row" id="history">
+      <h2 class="title text-center">Developer Profile</h2>
+      <img src="http://jonandlinda.com/codepenphotos/IMG_9662.jpg" class="propic img-responsive">
+      <div class="story">
+        <p class="q">So, Linda - What was your first introduction to web development?</p>
+        <p class="a">I found myself in a position where I wasn't satisfied with my previous work experience, and I had time to teach myself something new. I didn't have the funds to go to a traditional school, but knew I could find resources online. And I came across Harvard's Intro to Computer Science offering on the edX website, CS50. It sounded difficult and interesting, and since I could audit the course for free, I figured, why not? So I signed up. And it was difficult, and often frustrating. But it was also fun, and interesting, and I made it through and realized that I wanted to learn and create more.</p>
+        <p class="q">Are you working on anything now?</p>
+        <p class="a">Currently I'm working through the curriculum at Free Code Camp. It's given me some great information, and the challenges are really tough and fun. Also, the forums have been a great place to get help and not feel like I'm struggling alone. <br> I'm also working on some side projects for my current company, creating some single page sites to improve my skills and make my daily work a bit more efficient and easier.</p> 
+        <p class="q">What languages have you worked with so far? Which ones have you been most interested in?</p>
+        <p class="a">Well, CS50 introduced me to C, HTML, CSS, and PHP, with a little bit of MySQL as well. Through Free Code Camp, I'm using mostly HTML, CSS, and JS right now. <br> The web side of things has held my interest the most, so I'm really focusing on HTML, CSS, and JS at the moment, and I want to learn more about SQL and other database languages in the future, as I love collecting and utilizing data. </p> 
+        <p class="q">Have you worked with any frameworks?</p>
+        <p class="a">So far, I've worked with Bootstrap, and I have some basic introduction with Node.js and Gulp. (As in, I've found some tutorials and could reimplement them in my own code editor, but haven't really dug into them to fully understand them yet.)</p> 
+        <p class="q">Do you have a code editor of choice?</p>
+        <p class="a">Currently I've been using Visual Studio Code, and am really enjoying it. I've also used Cloud 9 (which is what we used for CS50) and Notepad++.</p> 
+        <p class="q">Last question: What other hobbies and interests do you have, outside of coding?</p>
+        <p class="a">I love cats (I have two of them currently); books (Some favorites: The Phantom Tollbooth by Norton Guster; The Game of Thrones series by George R.R.Martin; and most anything by Nicholas Sparks and Neil Gaiman); video games (Favorite series: Ratchet & Clank, Sly Cooper, The Last of Us); and driving around listening to music (most anything with great lyrics and fun harmonies, though my favorites are Matt Nathanson and Sara Bareilles) and podcasts (Favorite podcasts: Tanis, Freakonomics, Serial, Linear Digressions)</p> 
+      </div>
+    </div>
+  <!-- Contact -->
+    <div  class="row" id="contact">
+      <h2 class="title text-center">Reach out</h2>
+      <div class="sites">
+      <a href="https://www.freecodecamp.com/lindakatcodes" target="_blank" tooltip="FreeCodeCamp"><img src="http://jonandlinda.com/codepenphotos/fcc.png"></a>
+      <a href="https://github.com/lindakatcodes" target="_blank" tooltip="GitHub"><img src="http://jonandlinda.com/codepenphotos/github.png"></a>
+      <a href="https://codepen.io/lindakatcodes/" target="_blank" tooltip="CodePen"><img src="http://jonandlinda.com/codepenphotos/codepen.png"></a>
+      <a href="https://www.linkedin.com/in/linda-thompson-10534847" target="_blank" tooltip="LinkedIn"><img src="http://jonandlinda.com/codepenphotos/linkedin.png"></a>
+      <a href="mailto:lindakt16@gmail.com" target="_blank" tooltip="Email"><img src="http://jonandlinda.com/codepenphotos/emailadd.png"></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var maxHeight1 = 0;
+    $('#intro').each(function () {
+      var tmpHeight1 = $(this).height() + $(this).position().top;
+      if (tmpHeight1 > maxHeight1) {
+        maxHeight1 = tmpHeight1;
+        $('#intro').height(maxHeight1);
+      }
+    });
+
+    var maxHeight2 = 0;
+    $('#navigation').each(function () {
+      var tmpHeight2 = $(this).height() + $(this).position().top;
+      if (tmpHeight2 > maxHeight2) {
+        maxHeight2 = tmpHeight2;
+        $('#navigation').height(maxHeight2);
+      }
+    });
+
+    $('.spacer2').css('height', maxHeight1 + maxHeight2 + 'px');
+  </script>
+</body>
+</html>
