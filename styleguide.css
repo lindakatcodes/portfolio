@@ -17,10 +17,10 @@ header {
 }
 
 .covername {
-    background-color: black;
+    background-color: #3f3f3f;
     width: 100%;
-    opacity: 0.5;
-    color: white;
+    opacity: 0.6;
+    color: #f7f6f3;
     font-family: 'Amaranth', sans-serif;
     font-size: 85px;
     padding: 7% 0%;
@@ -40,7 +40,7 @@ nav {
     max-width: 0;
     overflow: hidden;
     transition: all 0.4s;
-    background: white;
+    background: #f7f6f3;
     font-size: 30px;
     font-weight: 600;
 }
@@ -85,7 +85,7 @@ nav a {
     text-decoration: none;
     padding: 20px;
     display: inline-block;
-    color: white;
+    color: #f7f6f3;
     font-family: 'Amaranth', sans-serif;        
     transition: all 0.4s;
 }
@@ -101,8 +101,18 @@ nav a:hover {
 /* Main site settings */
 .title {
   font-family: 'Lalezar', cursive;
-  color: white;
+  color: #f7f6f3;
   font-size: 48px;
+  text-align: center;
+}
+
+.main-site {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-section {
+    padding: 15vh 2vw 5vh 2vw;
 }
 
 .main-site .fixed-nav {
@@ -155,9 +165,6 @@ nav a:hover {
 /*certificate styles*/
 #certs {
     background: #a8d5a5;
-    padding-top: 50px;
-    padding-left: 1%;
-    position: relative;
 }
 
 .docs {
@@ -165,46 +172,39 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-top: 4%;
+    padding: 4% 0%;
 }
 
 .docs img {
-    width: 35%;
-    padding-bottom: 3%;
+    width: 45%;
+    height: auto;
 }
 
 /*history styles*/
 #history {
     background: #8db6c5;
-    padding-top: 50px;
-    padding-left: 1%;
-    position: relative;
 }
 
 .propic {
   float: left;
-  margin-right: 15px;
-  margin-top: 40px;
-  margin-bottom: 3px;
+  margin: 5% 4% 2% 1%;
   border-radius: 2%;
   height: auto;
   width: 40%;
 }
 
 .story {
-  padding: 4% 1% 4% 2%;
+    padding: 4% 2%;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 
 .q {
     font-weight: bold; 
-    font-family: 'Alegreya Sans', sans-serif;
-    font-size: 20px;
-    color: dimgray;
+    color: #3f3f3f;
 }
 
 .a {
     margin-left: 20px;
-    font-family: 'Alegreya Sans', sans-serif;
     font-size: 18px;
     color: #f7f6f3;
 }
