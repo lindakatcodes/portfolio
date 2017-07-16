@@ -11,43 +11,23 @@
     <link rel="stylesheet" href="/styleguide.css">
 </head>
 <body>
-  <div class="container-fluid">
   <!-- Intro / cover page -->
-    <div id="intro">
-      <div class="spacer"></div>
-      <div class="splash">
-        <h1 class="covername">Linda Thompson</h1>
-        <h2 class="coverdesc">Front end web developer</h2>
-        <a href="#projects" role="button" class="enter btn btn-block btn-success">
-         <span class="glyphicon glyphicon-chevron-down arrow"></span>
-         <span class="glyphicon glyphicon-chevron-down arrow"></span>
-         <span class="glyphicon glyphicon-chevron-down arrow"></span>
-         </a>
-      </div>
-    </div>
+  <header id="intro">
+    <h1 class="covername">LindaKat Codes</h1>
+  </header>
   <!-- Navigation -->
-    <div id="navigation">
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navitems">
-          <span class="glyphicon glyphicon-menu-hamburger menubtn"></span>
-          </button>
-          <a class="navbar-brand" href="#intro">
-          <img alt="Brand" class="logo" src="http://jonandlinda.com/codepenphotos/selflogo.png">
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="navitems">
-          <ul class="nav navbar-nav navbar-right">
-          <li class="sections"><a href="#projects">Projects</a></li>
-          <li class="sections"><a href="#certs">Certificates</a></li>
-          <li class="sections"><a href="#history">About</a></li>
-          <li class="sections"><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-  <!-- Projects -->
-  
+  <nav id="navigation">
+    <ul>
+      <li class="logo"><a href="#">LT</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certs">Certificates</a></li>
+      <li><a href="#history">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-site">
+    <!-- Projects -->
     <div class="row spacer2"></div>
     <div class="row" id="projects">
       <h2 class="title text-center">Projects</h2>
@@ -97,14 +77,14 @@
       </div>
 
     </div>
-  <!-- Certificates -->
-  <div class="row" id="certs">
-    <h2 class="title text-center">Certificates</h2>
-    <div class="docs">
-      <img class="img-responsive" src="http://jonandlinda.com/codepenphotos/HarvardX-CS50-Certificate-edX.jpg">
+    <!-- Certificates -->
+    <div class="row" id="certs">
+      <h2 class="title text-center">Certificates</h2>
+      <div class="docs">
+        <img class="img-responsive" src="http://jonandlinda.com/codepenphotos/HarvardX-CS50-Certificate-edX.jpg">
+      </div>
     </div>
-  </div>
-  <!-- Self history -->
+    <!-- Self history -->
     <div class="row" id="history">
       <h2 class="title text-center">Developer Profile</h2>
       <img src="http://jonandlinda.com/codepenphotos/IMG_9662.jpg" class="propic img-responsive">
@@ -123,7 +103,7 @@
         <p class="a">I love cats (I have two of them currently); books (Some favorites: The Phantom Tollbooth by Norton Guster; The Game of Thrones series by George R.R.Martin; and most anything by Nicholas Sparks and Neil Gaiman); video games (Favorite series: Ratchet & Clank, Sly Cooper, The Last of Us); and driving around listening to music (most anything with great lyrics and fun harmonies, though my favorites are Matt Nathanson and Sara Bareilles) and podcasts (Favorite podcasts: Tanis, Freakonomics, Serial, Linear Digressions)</p> 
       </div>
     </div>
-  <!-- Contact -->
+    <!-- Contact -->
     <div  class="row" id="contact">
       <h2 class="title text-center">Reach out</h2>
       <div class="sites">
@@ -134,28 +114,23 @@
       <a href="mailto:lindakt16@gmail.com" target="_blank" tooltip="Email"><img src="http://jonandlinda.com/codepenphotos/emailadd.png"></a>
       </div>
     </div>
-  </div>
+  </div> <!-- end of main site -->
 
   <script>
-    var maxHeight1 = 0;
-    $('#intro').each(function () {
-      var tmpHeight1 = $(this).height() + $(this).position().top;
-      if (tmpHeight1 > maxHeight1) {
-        maxHeight1 = tmpHeight1;
-        $('#intro').height(maxHeight1);
-      }
-    });
+    const nav = document.querySelector('#navigation');
+    const topOfNav = nav.offsetTop;
 
-    var maxHeight2 = 0;
-    $('#navigation').each(function () {
-      var tmpHeight2 = $(this).height() + $(this).position().top;
-      if (tmpHeight2 > maxHeight2) {
-        maxHeight2 = tmpHeight2;
-        $('#navigation').height(maxHeight2);
+    function fixNav() {
+      if (window.scrollY >= topOfNav) {
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
       }
-    });
+    };
 
-    $('.spacer2').css('height', maxHeight1 + maxHeight2 + 'px');
+    window.addEventListener('scroll', fixNav);
   </script>
 </body>
 </html>

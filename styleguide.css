@@ -1,81 +1,112 @@
-/*overall styles*/
+
 body {
   margin: 0 auto;
+  font-size: 20px;
 }
 
+
+/*intro styles*/
+header {
+    text-align: center;
+    background: url("http://jonandlinda.com/codepenphotos/sandFootprints.jpg") no-repeat center bottom;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.covername {
+    background-color: black;
+    width: 100%;
+    opacity: 0.5;
+    color: white;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 85px;
+    padding: 7% 0%;
+}
+
+/*navigation styles*/
+nav {
+    position: relative;
+    background: #3f3f3f;
+    top: 0;
+    width: 100%;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.logo {
+    max-width: 0;
+    overflow: hidden;
+    transition: all 0.4s;
+    background: white;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo a {
+    color: #3f3f3f;
+    font-family: 'Amaranth', sans-serif;    
+}
+
+.logo a:hover {
+    color: #3f3f3f;
+    transition: 0.4s;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.fixed-nav .logo {
+    max-width: 100vw;
+}
+
+.fixed-nav nav {
+    position: fixed;
+    box-shadow: 0 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    color: white;
+    font-family: 'Amaranth', sans-serif;        
+    transition: all 0.4s;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 24px;
+    transition: 0.4s;
+}
+
+/* Main site settings */
 .title {
   font-family: 'Lalezar', cursive;
   color: white;
   font-size: 48px;
 }
 
-/*intro styles*/
-#intro {
-    background: url("http://jonandlinda.com/codepenphotos/sandFootprints.jpg") no-repeat center center fixed;
-    background-size: cover;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-}
-
-.splash {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.5;
-}
-
-.spacer {
-    margin: 20% 0% 5% 0%;
-}
-
-.covername {
-    font-family: 'Amaranth', sans-serif;
-    font-size: 85px;
-}
-
-.coverdesc {
-    font-family: 'Lato', sans-serif;
-    font-size: 30px;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
-
-.enter {
-    border: 2px solid black;
-}
-
-.arrow {
-    color: #353535;
-    font-size: 40px;
-}
-
-/*navigation styles*/
-#navigation {
-    position: fixed;
-    z-index: 1;
-}
-
-.sections {
-  margin-right: 20px;
-  margin-top: 10px;
-  font-size: 16px;
-}
-
-.logo {
-  position: relative;
-  top: -7px;
-  max-height: 40px;
-}
-
-.menubtn {
-  color: white;
+.main-site .fixed-nav {
+    transform: scale(1);
 }
 
 /*profile/project styles*/
