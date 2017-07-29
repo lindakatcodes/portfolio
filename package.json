@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^4.3.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindakatcodes/portfolio.git"
+  },
+  "author": "Linda Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindakatcodes/portfolio/issues"
+  },
+  "homepage": "https://github.com/lindakatcodes/portfolio#readme"
+}
