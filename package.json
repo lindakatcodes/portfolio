@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Personal portfolio",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
+    "autoprefixer": "^7.1.2",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-watch": "^4.3.11"
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^4.3.11",
+    "postcss-simple-vars": "^4.0.0"
   },
   "repository": {
     "type": "git",
