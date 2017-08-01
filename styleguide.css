@@ -124,6 +124,23 @@ nav a:hover {
 }
 
 /*Project styles */
+#projects h2 {
+    color: $blue;
+    text-shadow: -3px 2px 2px $gray;
+}
+
+.projectSet {
+    border: 2px dotted red;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-rows: repeat(3, 350px);
+    grid-gap: 6% 3%;
+    justify-content: space-around;
+}
+
+.project {
+    border: 2px solid $tan;
+}
 
 /*Cert styles */
 
