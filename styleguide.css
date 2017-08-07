@@ -31,8 +31,7 @@ header {
     opacity: 0.6;
     color: $white;
     font-family: 'Amaranth', sans-serif;
-    font-size: 85px;
-    padding: 7% 0%;
+    font-size: 2.5rem;
 }
 
 /*navigation styles */
@@ -161,6 +160,7 @@ nav a:hover {
 .doc {
     width: 100%;
     height: auto;
+    border: 2px outset $gray;
 }
 
 /*About styles */
@@ -190,4 +190,33 @@ nav a:hover {
 #contact h2 {
     color: $white;
     text-shadow: -3px 2px 2px $tan;
+}
+
+.mainContact {
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 5vh;
+}
+
+.links {
+    color: $gray;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+    padding-bottom: 10px;
+}
+
+.links a {
+    text-decoration: none;
+    color: $gray;
+    font-size: 16px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    color: $gray;
 }
