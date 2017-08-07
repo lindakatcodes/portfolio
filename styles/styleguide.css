@@ -142,7 +142,7 @@ nav a:hover {
 }
 
 .page-section {
-    padding: 15vh 2vw 5vh 2vw;
+    padding: 7vh 2vw 5vh 2vw;
 }
 
 /*Project styles */
@@ -152,7 +152,6 @@ nav a:hover {
 }
 
 .projectSet {
-    border: 2px dotted red;
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
     grid-template-rows: repeat(3, 350px);
@@ -166,8 +165,54 @@ nav a:hover {
 }
 
 /*Cert styles */
+#certs {
+    background-color: #8e8683;
+}
+
+#certs h2 {
+    color: #fffffa;
+    text-shadow: -3px 2px 2px #9dafc5;
+}
+
+.docs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 350px);
+    grid-template-rows: 350px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.doc {
+    width: 100%;
+    height: auto;
+}
 
 /*About styles */
+#history h2 {
+    color: #5c8275;
+    text-shadow: -3px 2px 2px #3f3f3f;
+}
+
+.selfPic {
+    width: 30%;
+    height: auto;
+    float: left;
+    border: 2px outset #3f3f3f;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.story {
+    padding: 0px 10px;
+}
 
 /*Contact styles */
+#contact {
+    background-color: #9dafc5;
+}
 
+#contact h2 {
+    color: #fffffa;
+    text-shadow: -3px 2px 2px #8e8683;
+}
