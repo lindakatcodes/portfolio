@@ -4,6 +4,7 @@
   "description": "Personal portfolio",
   "main": "index.html",
   "dependencies": {
+    "smooth-scroll": "^12.1.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

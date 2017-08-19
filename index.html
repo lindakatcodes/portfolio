@@ -6,6 +6,8 @@
   <link href="https://fonts.googleapis.com/css?family=Amaranth|Lato" rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://use.fontawesome.com/d7a86c5f7b.js"></script>
+  <!-- Smooth Scroll -->
+  <script src="/node_modules/smooth-scroll/dist/js/smooth-scroll.polyfills.js"></script>
   <!-- CSS stylesheet -->
   <link rel="stylesheet" href="/styles/styleguide.css">
 </head>
@@ -101,6 +103,12 @@
     };
 
     window.addEventListener('scroll', fixNav);
+
+    var scroll = new SmoothScroll('a[href*="#"]',{
+      header: '[navigation]',
+      speed: 1200,
+      easing: 'easeInOutQuad'
+    });
   </script>
 </body>
 </html>
