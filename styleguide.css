@@ -169,7 +169,7 @@ nav a:hover {
 }
 
 .selfPic {
-    width: 30%;
+    width: 35%;
     height: auto;
     float: left;
     border: 2px outset $gray;
