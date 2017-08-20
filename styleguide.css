@@ -150,9 +150,10 @@ nav a:hover {
 
 .docs {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 350px);
-    grid-template-rows: 350px;
+    grid-template-columns: repeat(auto-fit, 325px);
+    grid-template-rows: repeat (auto-fit, 325px);
     justify-content: center;
+    padding-bottom: 10px;
 }
 
 .doc {
@@ -188,27 +189,29 @@ nav a:hover {
 #contact h2 {
     color: $white;
     text-shadow: -3px 2px 2px $tan;
+    margin-top: -5%;
 }
 
 .mainContact {
     text-align: center;
-    font-size: 20px;
+    font-size: 1.4rem;
     padding-bottom: 5vh;
 }
 
 .links {
     color: $gray;
+    height: 75px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-content: space-around;
+    align-content: space-between;
     padding-bottom: 10px;
 }
 
 .links a {
     text-decoration: none;
     color: $gray;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .links a:hover {
