@@ -16,6 +16,7 @@
   <header id="intro">
     <div class="covername">
       <h1>Linda Thompson</h1>
+      <h2>Aspiring Web Developer</h2>
       <i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i>
     </div>
   </header>
@@ -53,22 +54,24 @@
     <!-- Self history -->
     <div class="page-section" id="history">
       <h2 class="title">Developer Profile</h2>
-      <img src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/profilePhoto.jpg" alt="Self portrait" class="selfPic">
-      <div class="story">
-        <p>Hi there! My name's Linda. Thanks for taking the time to check out my page! It means a lot to me.
-        </p> 
-        <p>
-          My main languages are HTML, CSS, and JavaScript. I'm also learning MongoDB.
-        </p>
-        <p>
-          One thing I really want to do more of is work with data. I love tracking inventory and projects, keeping things current and complete, and giving others the ability to easily find out the status of projects so they can do their work more efficiently.
-        </p>
-        <p>
-          I also enjoy playing with creating CSS images and learning about layout techniques. I have a long way to go in this area, but it's fun to experiment with!
-        </p>
-        <p>
-          If you'd like to get ahold of me, all my contact info is below. Thanks for stopping by!
-        </p>
+      <div class="bio">
+        <img src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/profilePhoto.jpg" alt="Self portrait" class="selfPic">
+        <div class="story">
+          <p>Hi there! My name's Linda. Thanks for taking the time to check out my page! It means a lot to me.
+          </p> 
+          <p>
+            My main languages are HTML, CSS, and JavaScript. I'm also learning MongoDB.
+          </p>
+          <p>
+            One thing I really want to do more of is work with data. I love tracking inventory and projects, keeping things current and complete, and giving others the ability to easily find out the status of projects so they can do their work more efficiently.
+          </p>
+          <p>
+            I also enjoy playing with creating CSS images and learning about layout techniques. I have a long way to go in this area, but it's fun to experiment with!
+          </p>
+          <p>
+            If you'd like to get ahold of me, all my contact info is below. Thanks for stopping by!
+          </p>
+        </div>
       </div>
     </div>
     <!-- Contact -->
@@ -97,6 +100,7 @@
   </div> <!-- end of main site -->
 
   <script>
+    //selects nav section, makes sticky/fixed after opening image is scrolled past
     const nav = document.querySelector('#navigation');
     const topOfNav = nav.offsetTop;
 
@@ -112,6 +116,7 @@
 
     window.addEventListener('scroll', fixNav);
 
+    //smooth scroll for jumping to sections on page
     var scroll = new SmoothScroll('a[href*="#"]',{
       header: '[navigation]',
       speed: 1200,

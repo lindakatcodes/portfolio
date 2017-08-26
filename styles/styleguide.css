@@ -1,5 +1,7 @@
 /* global color vars */
 
+/* mixins for view sizes */
+
 /*global styles */
 body {
   margin: 0 auto;
@@ -35,6 +37,24 @@ header {
     font-size: 2.2rem;
 }
 
+@media (min-width: 800px) {
+
+.covername {
+        font-size: 2.5rem
+}
+    }
+
+.covername h2 {
+    font-size: 2rem;
+}
+
+@media (min-width: 800px) {
+
+.covername h2 {
+        font-size: 2.2rem
+}
+    }
+
 /*navigation styles */
 nav {
     position: relative;
@@ -62,11 +82,19 @@ nav {
 
 .logo a:hover {
     color: #3f3f3f;
-    -webkit-transition: 0.4s;
-    transition: 0.4s;
-    font-size: 1.5rem;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
     text-decoration: underline;
 }
+
+@media (any-hover: none) {
+
+.logo a:hover {
+        color: #fffffa;
+        text-decoration: none;
+        font-size: 1.4rem
+}
+    }
 
 .fixed-nav .logo {
     min-width: 14vw;
@@ -121,6 +149,13 @@ nav a:hover {
     transition: 0.4s;
 }
 
+@media (any-hover: none) {
+
+nav a:hover {
+        font-size: 1.15rem
+}
+    }
+
 /* Main site settings */
 .title {
   font-family: 'Amaranth', cursive;
@@ -174,10 +209,9 @@ nav a:hover {
 .docs {
     display: grid;
     grid-template-columns: repeat(auto-fit, 325px);
-    grid-template-rows: repeat (auto-fit, 325px);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    //grid-template-rows: repeat (auto-fit, 325px);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-bottom: 10px;
 }
 
@@ -185,6 +219,7 @@ nav a:hover {
     width: 100%;
     height: auto;
     border: 2px outset #3f3f3f;
+    margin: 0.5rem 0rem;
 }
 
 /*About styles */
@@ -202,9 +237,30 @@ nav a:hover {
     margin-right: 15px;
 }
 
+@media (min-width: 800px) {
+
+.selfPic {
+        width: 24%
+}
+    }
+
+@media (min-width: 1200px) {
+
+.selfPic {
+        width: 17%
+}
+    }
+
 .story {
     padding: 0px 10px;
 }
+
+@media (min-width: 800px) {
+
+.story {
+        padding-top: 1.1rem
+}
+    }
 
 /*Contact styles */
 #contact {
@@ -216,6 +272,13 @@ nav a:hover {
     text-shadow: -3px 2px 2px #8e8683;
     margin-top: -5%;
 }
+
+@media (min-width: 800px) {
+
+#contact h2 {
+        margin-top: 0
+}
+    }
 
 .mainContact {
     text-align: center;
@@ -237,6 +300,14 @@ nav a:hover {
         align-content: space-between;
     padding-bottom: 10px;
 }
+
+@media (min-width: 1200px) {
+
+.links {
+        height: 35px;
+        padding: 0
+}
+    }
 
 .links a {
     text-decoration: none;
