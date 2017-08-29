@@ -185,15 +185,16 @@ nav a:hover {
 
 .projectSet {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-template-rows: repeat(3, 350px);
-    grid-gap: 6% 3%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 15px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
 }
 
 .project {
     border: 2px solid #8e8683;
+    min-height: 100px;
+    padding: 7% 5%;
 }
 
 /*Cert styles */
