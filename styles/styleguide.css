@@ -1,29 +1,13 @@
 /* global color vars */
-$blue: #9dafc5;
-$green: #5c8275;
-$white: #fffffa;
-$tan: #8e8683;
-$gray: #3f3f3f;
 
 /* mixins for view sizes */
-@define-mixin medView {
-    @media (min-width: 800px) {
-        @mixin-content;
-    }
-}
-
-@define-mixin lgView {
-    @media (min-width: 1200px) {
-        @mixin-content;
-    }
-}
 
 /*global styles */
 body {
   margin: 0 auto;
   font-size: 18px;
   font-family: 'Lato', sans-serif;
-  background-color: $white;
+  background-color: #fffffa;
 }
 
 
@@ -33,38 +17,51 @@ header {
     background: url("http://jonandlinda.com/codepenphotos/sandFootprints.jpg") no-repeat center bottom;
     background-size: cover;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .covername {
-    background-color: $gray;
+    background-color: #3f3f3f;
     width: 100%;
     opacity: 0.6;
-    color: $white;
+    color: #fffffa;
     font-family: 'Amaranth', sans-serif;
     font-size: 2.2rem;
-
-    @mixin medView {
-        font-size: 2.5rem;
-    }
 }
+
+@media (min-width: 800px) {
+
+.covername {
+        font-size: 2.5rem
+}
+    }
 
 .covername h2 {
     font-size: 2rem;
-
-    @mixin medView {
-        font-size: 2.2rem;
-    }
 }
+
+@media (min-width: 800px) {
+
+.covername h2 {
+        font-size: 2.2rem
+}
+    }
 
 /*navigation styles */
 nav {
     position: relative;
-    background: $gray;
+    background: #3f3f3f;
     top: 0;
     width: 100%;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
     z-index: 1;
 }
@@ -72,27 +69,32 @@ nav {
 .logo {
     max-width: 0;
     overflow: hidden;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background: $green;
+    background: #5c8275;
     font-size: 1.4rem;
 }
 
 .logo a {
-    color: $white;
+    color: #fffffa;
     font-family: 'Amaranth', sans-serif;
 }
 
 .logo a:hover {
-    color: $gray;
+    color: #3f3f3f;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
     text-decoration: underline;
-
-    @media (any-hover: none) {
-        color: $white;
-        text-decoration: none;
-        font-size: 1.4rem;
-    }
 }
+
+@media (any-hover: none) {
+
+.logo a:hover {
+        color: #fffffa;
+        text-decoration: none;
+        font-size: 1.4rem
+}
+    }
 
 .fixed-nav .logo {
     min-width: 14vw;
@@ -100,43 +102,59 @@ nav {
 
 .fixed-nav nav {
     position: fixed;
-    box-shadow: 0 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 5px rgba(0,0,0,0.1);
+            box-shadow: 0 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
 nav li {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 nav a {
     text-decoration: none;
     padding: 13px 2px;
     display: inline-block;
-    color: $white;
+    color: #fffffa;
     font-family: 'Amaranth', sans-serif;
+    -webkit-transition: all 0.4s;
     transition: all 0.4s;
 }
 
 nav a:hover {
     text-decoration: none;
-    color: $white;
+    color: #fffffa;
     font-size: 1.4rem;
+    -webkit-transition: 0.4s;
     transition: 0.4s;
-
-    @media (any-hover: none) {
-        font-size: 1.15rem;
-    }
 }
+
+@media (any-hover: none) {
+
+nav a:hover {
+        font-size: 1.15rem
+}
+    }
 
 /* Main site settings */
 .title {
@@ -146,8 +164,13 @@ nav a:hover {
 }
 
 .main-site {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .page-section {
@@ -156,8 +179,8 @@ nav a:hover {
 
 /*Project styles */
 #projects h2 {
-    color: $blue;
-    text-shadow: -3px 2px 2px $gray;
+    color: #9dafc5;
+    text-shadow: -3px 2px 2px #3f3f3f;
 }
 
 #projects img {
@@ -186,81 +209,94 @@ nav a:hover {
 
 .flag__body {
     width: 100%;
-    color: $gray;
+    color: #3f3f3f;
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 20px;
 }
 
 /*Cert styles */
 #certs {
-    background-color: $tan;
+    background-color: #8e8683;
 }
 
 #certs h2 {
-    color: $white;
-    text-shadow: -3px 2px 2px $blue;
+    color: #fffffa;
+    text-shadow: -3px 2px 2px #9dafc5;
 }
 
 .docs {
     display: grid;
     grid-template-columns: repeat(auto-fit, 325px);
     //grid-template-rows: repeat (auto-fit, 325px);
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     padding-bottom: 10px;
 }
 
 .doc {
     width: 100%;
     height: auto;
-    border: 2px outset $gray;
+    border: 2px outset #3f3f3f;
     margin: 0.5rem 0rem;
 }
 
 /*About styles */
 #history h2 {
-    color: $green;
-    text-shadow: -3px 2px 2px $gray;
+    color: #5c8275;
+    text-shadow: -3px 2px 2px #3f3f3f;
 }
 
 .selfPic {
     width: 45%;
     height: auto;
     float: left;
-    border: 2px outset $gray;
+    border: 2px outset #3f3f3f;
     border-radius: 50%;
     margin-right: 15px;
-
-    @mixin medView {
-        width: 24%;
-    }
-
-    @mixin lgView {
-        width: 17%;
-    }
 }
+
+@media (min-width: 800px) {
+
+.selfPic {
+        width: 24%
+}
+    }
+
+@media (min-width: 1200px) {
+
+.selfPic {
+        width: 17%
+}
+    }
 
 .story {
     padding: 0px 10px;
-
-    @mixin medView {
-        padding-top: 1.1rem;
-    }
 }
+
+@media (min-width: 800px) {
+
+.story {
+        padding-top: 1.1rem
+}
+    }
 
 /*Contact styles */
 #contact {
-    background-color: $blue;
+    background-color: #9dafc5;
 }
 
 #contact h2 {
-    color: $white;
-    text-shadow: -3px 2px 2px $tan;
+    color: #fffffa;
+    text-shadow: -3px 2px 2px #8e8683;
     margin-top: -5%;
-
-    @mixin medView {
-        margin-top: 0;
-    }
 }
+
+@media (min-width: 800px) {
+
+#contact h2 {
+        margin-top: 0
+}
+    }
 
 .mainContact {
     text-align: center;
@@ -269,23 +305,31 @@ nav a:hover {
 }
 
 .links {
-    color: $gray;
+    color: #3f3f3f;
     height: 75px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
     padding-bottom: 10px;
-
-    @mixin lgView {
-        height: 35px;
-        padding: 0;
-    }
 }
+
+@media (min-width: 1200px) {
+
+.links {
+        height: 35px;
+        padding: 0
+}
+    }
 
 .links a {
     text-decoration: none;
-    color: $gray;
+    color: #3f3f3f;
     font-size: 1rem;
 }
 
@@ -294,5 +338,5 @@ nav a:hover {
 }
 
 .icons {
-    color: $gray;
+    color: #3f3f3f;
 }
