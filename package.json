@@ -16,6 +16,20 @@
     "postcss-nested": "^2.1.2",
     "postcss-simple-vars": "^4.0.0"
   },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": ["error", {
+        "allow": ["log", "warn", "error"]
+      }],
+      "no-constant-condition": ["error", {
+        "checkLoops": false
+      }]
+    }
+  },
+  "prettier": {
+    "printwidth": 100
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lindakatcodes/portfolio.git"
