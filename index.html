@@ -12,153 +12,16 @@
   <link rel="stylesheet" href="/styles/styleguide.css">
 </head>
 <body>
-  <!-- Intro / cover page -->
-  <header id="intro">
-    <div class="covername">
-      <h1>Linda Thompson</h1>
-      <h2>Aspiring Web Developer</h2>
-      <i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i>
-    </div>
-  </header>
-  <!-- Navigation -->
-  <nav id="navigation">
-    <ul>
-      <li class="logo"><a href="#">LT</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certs">Certificates</a></li>
-      <li><a href="#history">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="main-site">
-    <!-- Projects -->
-    <div class="page-section" id="projects">
-      <h2 class="title">Projects</h2>
-      <div class="flag">
-          <div class="flag__image">
-          <img src="http://jonandlinda.com/codepenphotos/localWeatherApp.jpg" alt="Local Weather App">
-          </div>
-          <div class="flag__body">
-            <p>This task asked us to create a weather app where you could see your local weather, have an icon that changes depending on the weather conditions, and toggle between Fahrenheit and Celcius. This is my first program that gathered information from an API. Since we are using Codepen for our code, there was an extra little hoop to jump through to return the data (cross origin/https technicality), but I managed to get it working without too much trouble. The thing that honestly gave me the most difficulty with this task was the weather icons. I found a set that I liked better than the ones that came with the Open Weather Map API, and it sounded easy to set up. Famous last words, right? It took a lot of tweaking and frustration, and it's still not as clean/perfect as I would like (the spacing is still off and the layered icons don't always line up exactly how I'd like), but it's a lot closer to what I had in mind. The background colors of the labels also change depending on the time of day and the type of the weather. This project is viewable <a href="https://codepen.io/lindakatcodes/full/VKPGrk/" target="_blank">here.</a></p>
-          </div>
-        </div>
   
-          <div class="flag">
-          <div class="flag__image">
-          <img src="http://jonandlinda.com/codepenphotos/randquotegen.jpg" alt="Random Quote Generator">
-          </div>
-          <div class="flag__body">
-            <p>For the Free Code Camp curriculum, we were tasked with creating a random quote generator. I created a list in another pen of quotes that I wanted to use, and linked that pen to my generator to cycle through the quotes. This task helped me learn more about Javascript functions, including setting up a way to cycle through quotes and colors, ensuring selections weren't immediately repeated, and setting up a Twitter button and how to select where and how a post would end if it was too long for a tweet. It also gave me an inital idea of how to access information from a different source. This project is viewable <a href="https://codepen.io/lindakatcodes/full/kkPzbY/" target="_blank">here.</a></p>
-          </div>
-        </div>
-  
-        <div class="flag">
-          <div class="flag__image">
-            <img src="http://jonandlinda.com/codepenphotos/deliveryformfinal.jpg" alt="Delivery Form">
-          </div>
-          <div class="flag__body">
-            <p>This project came about because I wanted a number pad for a form. I track delivery locations and invoice numbers in my current position, and I had been using a Google form to input this information into a spreadsheet. However, the form didn't have much I could really customize. By creating my own form, I could get the number keypad I so badly wanted, I could stay on the same page once I had entered the information (using a small alert to show it had been logged into the spreadsheet), and I could control the look more.</p>
-          </div>
-        </div>
-  
-        <div class="flag">
-          <div class="flag__image">
-          <img src="http://jonandlinda.com/codepenphotos/logofinal.jpg" alt="Logolinks site">
-          </div>
-          <div class="flag__body">
-            <p>Logolinks was my final project for CS50, Harvard's intro to computer science class given through edX. My partner had told me he'd always wanted a place where he could store links for easy access, similar to bookmarks but a different way of viewing them, where it was easier to copy the links and share them with others. This was what I came up with. This project is viewable <a href="http://logolinks.jonandlinda.com" target="_blank">here.</a></p>
-          </div>
-        </div>
-  
-        <div class="flag">
-          <div class="flag__image">
-            <img src="http://jonandlinda.com/codepenphotos/GPBCOrderForm.jpg" alt="Business Card Order Form">
-          </div>
-          <div class="flag__body">
-            <p>For my first project, I created a business card order form for a company client. They had been sending their orders to us through fax, and had requested a way to be able to email us the information. I volunteered myself and created this, which emails the form information to our sales department. They have been very pleased with it, simple as it is.</p>
-          </div>
-        </div>
-  
-    </div>
-    <!-- Certificates -->
-    <div class="page-section" id="certs">
-      <h2 class="title">Certificates</h2>
-      <div class="docs">
-        <img class="doc"  src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/CS50Cert.jpg" alt="Intro to Computer Science Completion Certificate">
-      </div>
-    </div>
-    <!-- Self history -->
-    <div class="page-section" id="history">
-      <h2 class="title">Developer Profile</h2>
-      <div class="bio">
-        <img src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/profilePhoto.jpg" alt="Self portrait" class="selfPic">
-        <div class="story">
-          <p>Hi there! My name's Linda. Thanks for taking the time to check out my page! It means a lot to me.
-          </p> 
-          <p>
-            My main languages are HTML, CSS, and JavaScript. I'm also learning MongoDB.
-          </p>
-          <p>
-            One thing I really want to do more of is work with data. I love tracking inventory and projects, keeping things current and complete, and giving others the ability to easily find out the status of projects so they can do their work more efficiently.
-          </p>
-          <p>
-            I also enjoy playing with creating CSS images and learning about layout techniques. I have a long way to go in this area, but it's fun to experiment with!
-          </p>
-          <p>
-            If you'd like to get ahold of me, all my contact info is below. Thanks for stopping by!
-          </p>
-        </div>
-      </div>
-    </div>
-    <!-- Contact -->
-    <div  class="page-section" id="contact">
-      <h2 class="title text-center">Reach out</h2>
-      <div class="sites">
-        <div class="mainContact">
-          <p><i class="icons fa fa-envelope" aria-hidden="true"></i> Email: lindakt16@gmail.com</p>
-        </div>
-        <div class="links">
-          <a href="https://github.com/lindakatcodes" target="_blank" tooltip="GitHub"><i class="icons fa fa-github fa-2x" aria-hidden="true"></i> Github</a>
-
-          <a href="https://codepen.io/lindakatcodes/" target="_blank" tooltip="CodePen"><i class="icons fa fa-codepen fa-2x" aria-hidden="true"></i> CodePen</a>
-
-          <a href="https://www.linkedin.com/in/linda-thompson-10534847" target="_blank" tooltip="LinkedIn"><i class="icons fa fa-linkedin-square fa-2x" aria-hidden="true"></i> LinkedIn</a>
-
-          <a href="https://twitter.com/lindakatcodes" target="_blank" tooltip="Twitter"><i class="icons fa fa-twitter fa-2x" aria-hidden="true"></i> Twitter</a>
-          <!-- Hiding until I have an actual updated file to put here
-          <a href="" target="_blank" tooltip="resume"><i class="icons fa fa-file-pdf-o fa-2x" aria-hidden="true"></i> Resume</a>
-            -->
-          <a href="https://builtbykat.blogspot.com/" target="_blank" tooltip="blog"><i class="icons fa fa-rss fa-2x" aria-hidden="true"></i> Blog</a>
-
-        </div>
-      </div>
-    </div>
-  </div> <!-- end of main site -->
-
   <script>
-    //selects nav section, makes sticky/fixed after opening image is scrolled past
-    const nav = document.querySelector('#navigation');
-    const topOfNav = nav.offsetTop;
-
-    function fixNav() {
-      if (window.scrollY >= topOfNav) {
-        document.body.style.paddingTop = nav.offsetHeight + 'px';
-        document.body.classList.add('fixed-nav');
-      } else {
-        document.body.style.paddingTop = 0;
-        document.body.classList.remove('fixed-nav');
-      }
-    };
-
-    window.addEventListener('scroll', fixNav);
-
+    /*
     //smooth scroll for jumping to sections on page
     var scroll = new SmoothScroll('a[href*="#"]',{
       header: '[navigation]',
       speed: 1200,
       easing: 'easeInOutQuad'
     });
+    */
   </script>
 </body>
 </html>
