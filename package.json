@@ -27,9 +27,6 @@
       }]
     }
   },
-  "prettier": {
-    "printwidth": 100
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lindakatcodes/portfolio.git"
