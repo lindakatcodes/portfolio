@@ -1,9 +1,23 @@
+$blue: #9dafc5;
+$green: #5c8275;
+$white: #fffffa;
+$tan: #8e8683;
+$gray: #3f3f3f;
+
+/* Global/Main styles */
 body {
     font: 'Encode Sans';
     font-size: 16px;
     padding: 4px;
 }
 
+section h2 {
+    font-family: 'Sansita';
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Header styles */
 .header {
     background-color: gray;
     color: white;
@@ -21,6 +35,7 @@ body {
     font-size: 2rem;
 }
 
+/* Navigation styles */
 .nav ul {
     list-style-type: none;
     font-family: 'Encode Sans';
@@ -29,8 +44,116 @@ body {
     padding: 0.2rem;
 }
 
-section h2 {
-    font-family: 'Sansita';
-    font-size: 2rem;
-    text-align: center;
+/* About Styles */
+.about {
+    display: inline-block;
+}
+
+.leadLine {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.profilePhoto {
+    height: 14rem;
+    float: left;
+    shape-outside: ellipse();
+    margin-right: 3%;
+}
+
+.aboutInfo {
+    font-size: 1.2rem;
+    padding: 0 0.25rem;
+    line-height: 1.3;
+    margin-top: -0.2rem;
+}
+
+@media screen and (min-width: 600px) {
+    .leadLine {
+        font-size: 2rem;
+    }
+
+    .profilePhoto {
+        height: 23rem;
+        margin-right: 1.5%;
+        margin-top: 0.5rem;
+    }
+
+    .aboutInfo {
+        margin-top: -0.2rem;
+        margin-right: 1.75rem;
+        padding-right: 7%;
+    }
+}
+
+/*Projects styles */
+
+.projects_container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+}
+
+@media screen and (min-width: 600px) {
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .horiz {
+    grid-column-end: span 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .horiz {
+    grid-row-end: span 2;
+  }
+
+  .vert {
+    grid-row-end: span 2;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .horiz {
+    grid-row-end: span 1;
+  }
+}
+
+.project {
+  border: 2px solid $gray;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: row;
+  align-content: space-between;
+}
+
+.description {
+  padding: 0 3%;
+}
+
+.pImg {
+  width: 100%;
+}
+
+.viewProject {
+  margin-bottom: 3%;
+  height: 1.9rem;
+  width: 7rem;
+}
+
+/* Certificate Styles */
+.docs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    justify-content: space-around;
+}
+
+.doc {
+    width: 100%;
+    height: auto;
+    border: 2px solid $gray;
+    box-shadow: 2px 3px 5px $gray;
 }
