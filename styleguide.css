@@ -4,6 +4,24 @@ $white: #fffffa;
 $tan: #8e8683;
 $gray: #3f3f3f;
 
+@define-mixin midsize {
+    @media (min-width: 600px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin desktop {
+    @media (min-width: 1200px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin largest {
+    @media (min-width: 1450px) {
+        @mixin-content;
+    }
+}
+
 /* Global/Main styles */
 body {
     font: 'Encode Sans';
@@ -68,7 +86,7 @@ section h2 {
     margin-top: -0.2rem;
 }
 
-@media screen and (min-width: 600px) {
+@mixin midsize {
     .leadLine {
         font-size: 2rem;
     }
@@ -95,7 +113,7 @@ section h2 {
   grid-auto-flow: dense;
 }
 
-@media screen and (min-width: 600px) {
+@mixin midsize {
   .description {
     font-size: 1.1rem;
   }
@@ -105,7 +123,7 @@ section h2 {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@mixin desktop {
   .horiz {
     grid-row-end: span 2;
   }
@@ -115,7 +133,7 @@ section h2 {
   }
 }
 
-@media screen and (min-width: 1450px) {
+@mixin largest {
   .horiz {
     grid-row-end: span 1;
   }
@@ -127,10 +145,11 @@ section h2 {
   display: grid;
   grid-auto-flow: row;
   align-content: space-between;
+  box-shadow: 3px 6px 15px $tan;
 }
 
 .description {
-  padding: 0 3%;
+  padding: 0 3.5%;
 }
 
 .pImg {
@@ -139,8 +158,15 @@ section h2 {
 
 .viewProject {
   margin-bottom: 3%;
-  height: 1.9rem;
-  width: 7rem;
+  height: 3rem;
+  width: 11rem;
+  font-size: 1.1rem;
+  background-color: $tan;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 /* Certificate Styles */
@@ -155,5 +181,51 @@ section h2 {
     width: 100%;
     height: auto;
     border: 2px solid $gray;
-    box-shadow: 2px 3px 5px $gray;
+    box-shadow: 3px 6px 15px $tan;
+}
+
+/* Contact Styles */
+.sites {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.mainContact {
+    font-size: 1.3rem;
+    color: $gray;
+
+    .icons {
+        font-size: 1.4rem;
+        color: $blue;
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1rem; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@mixin midsize {
+    .links {
+        font-size: 1.3rem;
+    }
+
+    .mainContact {
+        font-size: 1.5rem;
+
+        .icons {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.icons {
+    color: $green;
+}
+
+.icons.even {
+    color: $blue;
 }
