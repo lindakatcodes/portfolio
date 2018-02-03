@@ -1,0 +1,23 @@
+$blue: #9dafc5;
+$green: #5c8275;
+$white: #fffffa;
+$tan: #8e8683;
+$gray: #3f3f3f;
+
+@define-mixin midsize {
+    @media (min-width: 600px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin desktop {
+    @media (min-width: 1200px) {
+        @mixin-content;
+    }
+}
+
+@define-mixin largest {
+    @media (min-width: 1450px) {
+        @mixin-content;
+    }
+}

@@ -1,0 +1,40 @@
+.about {
+    display: inline-block;
+}
+
+.leadLine {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.profilePhoto {
+    height: 14rem;
+    float: left;
+    shape-outside: ellipse();
+    margin-right: 3%;
+}
+
+.aboutInfo {
+    font-size: 1.2rem;
+    padding: 0 0.25rem;
+    line-height: 1.3;
+    margin-top: -0.2rem;
+}
+
+@mixin midsize {
+    .leadLine {
+        font-size: 2rem;
+    }
+
+    .profilePhoto {
+        height: 23rem;
+        margin-right: 1.5%;
+        margin-top: 0.5rem;
+    }
+
+    .aboutInfo {
+        margin-top: -0.2rem;
+        margin-right: 1.75rem;
+        padding-right: 7%;
+    }
+}

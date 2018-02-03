@@ -1,0 +1,21 @@
+.hero {
+    position: relative;
+}
+
+.intro h1 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    font-size: 3rem;
+    font-family: 'Sansita';
+}
+
+.headerPic {
+    width: 100%;
+    height: auto;
+    padding: 0;
+}

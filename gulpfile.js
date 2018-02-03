@@ -6,16 +6,20 @@ autoprefixer = require('autoprefixer'),
 cssVars = require('postcss-simple-vars'),
 nested = require('postcss-nested'),
 cssImport = require('postcss-import'),
-mixins = require('postcss-mixins');
+mixins = require('postcss-mixins'),
+del = require('del'),
+usemin = require('gulp-usemin'),
+rev = require('gulp-rev'),
+cssnano = require('gulp-cssnano');
 
 gulp.task('styles', function() {
-    return gulp.src('./styleguide.css')
-    .pipe(postcss([mixins, cssVars, nested, autoprefixer]))
+    return gulp.src('./assets/styles/styles.css')
+    .pipe(postcss([cssImport, mixins, cssVars, nested, autoprefixer]))
     .on('error', function(errorInfo) {
         console.log(errorInfo.toString());
         this.emit('end');
     })
-    .pipe(gulp.dest('./styles'));
+    .pipe(gulp.dest('./compiledFiles/styles'));
 })
 
 gulp.task('watch', function() {
@@ -30,12 +34,43 @@ gulp.task('watch', function() {
         browserSync.reload();
     });
 
-    watch('./styleguide.css', function() {
+    watch('./assets/styles/**/*.css', function() {
         gulp.start('cssStyles');
     });
 });
 
 gulp.task('cssStyles', ['styles'], function() {
-    return gulp.src('./styles/styleguide.css')
+    return gulp.src('./compiledFiles/styles/styles.css')
     .pipe(browserSync.stream());
 })
+
+gulp.task('deleteDistFolder', function() {
+    return del('./currentbuild');
+});
+
+gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
+    var pathsToCopy = [
+        './**/*',
+        '!./index.html',
+        '!./assets/styles/**',
+        '!./compiledFiles',
+        '!./compiledFiles/**'
+    ]
+
+    return gulp.src(pathsToCopy)
+        .pipe(gulp.dest('./currentbuild'));
+});
+
+gulp.task('useminTrigger', ['deleteDistFolder'], function() {
+    gulp.start('usemin');
+});
+
+gulp.task('usemin', ['styles'], function() {
+    return gulp.src('./index.html')
+        .pipe(usemin({
+            css: [function() {return rev()}, function() {return cssnano()}]
+        }))
+        .pipe(gulp.dest('./currentbuild'));
+});
+
+gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']);

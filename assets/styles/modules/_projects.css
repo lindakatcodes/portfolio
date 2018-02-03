@@ -1,0 +1,62 @@
+.projects_container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+}
+
+@mixin midsize {
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .horiz {
+    grid-column-end: span 2;
+  }
+}
+
+@mixin desktop {
+  .horiz {
+    grid-row-end: span 2;
+  }
+
+  .vert {
+    grid-row-end: span 2;
+  }
+}
+
+@mixin largest {
+  .horiz {
+    grid-row-end: span 1;
+  }
+}
+
+.project {
+  border: 2px solid $gray;
+  text-align: center;
+  display: grid;
+  grid-auto-flow: row;
+  align-content: space-between;
+  box-shadow: 3px 6px 15px $tan;
+}
+
+.description {
+  padding: 0 3.5%;
+}
+
+.pImg {
+  width: 100%;
+}
+
+.viewProject {
+  margin-bottom: 3%;
+  height: 3rem;
+  width: 11rem;
+  font-size: 1.1rem;
+  background-color: $tan;
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}

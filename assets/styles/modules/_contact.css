@@ -1,0 +1,44 @@
+.sites {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.mainContact {
+    font-size: 1.3rem;
+    color: $gray;
+
+    .icons {
+        font-size: 1.4rem;
+        color: $blue;
+    }
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.1rem; 
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@mixin midsize {
+    .links {
+        font-size: 1.3rem;
+    }
+
+    .mainContact {
+        font-size: 1.5rem;
+
+        .icons {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.icons {
+    color: $green;
+}
+
+.icons.even {
+    color: $blue;
+}
