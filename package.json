@@ -14,17 +14,28 @@
     "gulp-watch": "^4.3.11",
     "postcss-mixins": "^6.1.0",
     "postcss-nested": "^2.1.2",
+    "postcss-import": "^11.0.0",
     "postcss-simple-vars": "^4.0.0"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
     "rules": {
-      "no-console": ["error", {
-        "allow": ["log", "warn", "error"]
-      }],
-      "no-constant-condition": ["error", {
-        "checkLoops": false
-      }]
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "log",
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "no-constant-condition": [
+        "error",
+        {
+          "checkLoops": false
+        }
+      ]
     }
   },
   "repository": {

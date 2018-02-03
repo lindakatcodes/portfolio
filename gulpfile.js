@@ -3,8 +3,9 @@ watch = require('gulp-watch'),
 browserSync = require('browser-sync').create(),
 postcss = require('gulp-postcss'),
 autoprefixer = require('autoprefixer'),
-nested = require('postcss-nested'),
 cssVars = require('postcss-simple-vars'),
+nested = require('postcss-nested'),
+cssImport = require('postcss-import'),
 mixins = require('postcss-mixins');
 
 gulp.task('styles', function() {

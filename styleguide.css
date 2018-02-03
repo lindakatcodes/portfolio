@@ -41,7 +41,83 @@ section h2 {
 
 /* Header styles */
 
+.header {
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+}
 
+.menuIcon {
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        transform-origin: 0 0;
+        transition: transform 0.3s ease-out;
+    }
+
+    &::after {
+        content: "";            
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        background-color: white;
+        transition: transform 0.3s ease-out;
+        transform-origin: 0 100%;
+    }
+
+    @mixin midSize {
+        display: none;
+    }
+}
+
+.menuIconBar {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease-out;
+    transform-origin: 0 50%;
+}
+
+.menuContent {
+    opacity: 0;
+    transform: scale(1.2);
+    padding-top: 90px;
+    text-align: center;
+    transition: all 0.3s ease-out;
+    z-index: -10;
+    position: relative;
+
+    @mixin midsize {
+        opacity: 1;
+        z-index: 1;
+        padding-top: 0;
+        transform: scale(1);
+
+    }
+
+    &--is-visible {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+    }
+}
 
 /*Intro styles */
 .intro {
