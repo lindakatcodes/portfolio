@@ -2,6 +2,13 @@
     padding: 10px 0;
     position: absolute;
     width: 100%;
+    z-index: 2;
+    padding: 0 15px;
+
+    @mixin midsize {
+        background-color: $green;
+        position: fixed;
+    }
 }
 
 .menuIcon {
@@ -71,15 +78,23 @@
 }
 
 .nav {
-    background-color: $gray;
-}
+    padding: 0.7rem;
 
-.nav ul {
-    list-style-type: none;
-    text-decoration: none;
-    font-family: 'Encode Sans';
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem;
-    color: $white;
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    li {
+        list-style: none;
+        padding: 0.2rem;
+    
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
 }

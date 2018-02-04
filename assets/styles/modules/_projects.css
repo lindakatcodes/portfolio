@@ -41,22 +41,22 @@
 }
 
 .description {
-  padding: 0 3.5%;
+  padding: 0 4%;
 }
 
 .pImg {
   width: 100%;
+  border-bottom: 2px solid $gray;
 }
 
 .viewProject {
-  margin-bottom: 3%;
-  height: 3rem;
-  width: 11rem;
-  font-size: 1.1rem;
   background-color: $tan;
-
-  a {
-    color: $white;
-    text-decoration: none;
-  }
+  color: $white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin-bottom: 3%;
+  border: 1.5px solid $gray;
+  text-shadow: 2px 1.5px 1px $gray;
 }
