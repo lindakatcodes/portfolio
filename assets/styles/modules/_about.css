@@ -1,0 +1,48 @@
+.about {
+    display: inline-block;
+}
+
+.profilePhoto {
+    height: 14rem;
+    float: left;
+    shape-outside: ellipse();
+    margin-right: 4%;
+}
+
+.aboutInfo {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    padding: 0 0.5rem;
+    margin-top: -0.2rem;
+}
+
+@mixin midsize {
+    .profilePhoto {
+        height: 18rem;
+        margin-right: 3%;
+        margin-top: 0.5rem;
+    }
+
+    .aboutInfo {
+        margin-top: -0.2rem;
+        margin-right: 1.75rem;
+        padding: 0 1rem;
+    }
+}
+
+@mixin desktop {
+    .about {
+        padding: 0 2.5rem;
+    }
+
+    .profilePhoto {
+        height: 20rem;
+        margin-top: 0;
+        margin-right: 2%;
+    }
+
+    .aboutInfo {
+        font-size: 1.3rem;
+        padding: 0 5rem;
+    }
+}

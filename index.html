@@ -3,158 +3,174 @@
   <!-- Meta tag -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Amaranth|Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Encode+Sans|Sansita" rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://use.fontawesome.com/d7a86c5f7b.js"></script>
   <!-- Smooth Scroll -->
   <script src="/node_modules/smooth-scroll/dist/js/smooth-scroll.polyfills.js"></script>
   <!-- CSS stylesheet -->
-  <link rel="stylesheet" href="/styles/styleguide.css">
+  <!-- build:css assets/styles/styles.css -->
+  <link rel="stylesheet" href="/compiledFiles/styles/styles.css">
+  <!-- endbuild -->
 </head>
 <body>
-  <!-- Intro / cover page -->
-  <header id="intro">
-    <div class="covername">
-      <h1>Linda Thompson</h1>
-      <h2>Aspiring Web Developer</h2>
-      <i class="fa fa-angle-double-down fa-2x" aria-hidden="true"></i>
+  <!--Header and Nav Sections-->
+  <header class="header"> <!-- site-header -->
+    <div class="menuIcon"> <!-- site-header__menu-icon -->
+      <div class="menuIcon__middle"></div> <!-- __middle -->
+    </div>
+    <div class="menuContent"> <!-- site-header__menu-content -->
+      <nav class="nav"> <!-- primary-nav primary-nav--pull-right -->
+        <ul>
+          <li><a href="#" id="home-link">Home</a></li>
+          <li><a href="#projectSection" id="project-link">Projects</a></li>
+          <li><a href="#certificateSection" id="cert-link">Certificates</a></li>
+          <li><a href="#aboutSection" id="about-link">About</a></li>
+          <li><a href="#contactSection" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <!-- Navigation -->
-  <nav id="navigation">
-    <ul>
-      <li class="logo"><a href="#">LT</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certs">Certificates</a></li>
-      <li><a href="#history">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <!--Intro Photo-->
+  <div class="hero">
+    <img src="https://res.cloudinary.com/lindakatcodes/image/upload/c_fill,g_north,h_0.75,w_1/v1511844956/portfolioHeaders/bocagrande2016-0097_tj0pje.jpg" class="heroPic">
+    <h1>Welcome! I'm Linda.</h1>
+    <h2>Let me show you around!</h2>
+  </div>
+  <main class="wrapper">
+    <!--Projects Section-->
+    <section id="projectSection">
+      <h2>Here's what I can do!</h2>
+      <div class="projects_container">
+        <div class="project horiz">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_7:5,c_pad,b_auto:border/v1509818887/portfolioProjects/Imgs/quotePng_ij7jnf.png" alt="Random Quote Generator">
+          <div class="description">
+            <p>A freeCodeCamp project that displays a random quote. You can request a new quote and share the current quote on Twitter. Also changes colors!</p>
+            <a href="https://codepen.io/lindakatcodes/full/kkPzbY/" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_4:4,c_pad,b_auto:border/v1509818887/portfolioProjects/Imgs/hobbesPng_dc9ffz.png" alt="Hobbes the Tiger">
+          <div class="description">
+            <p>A DailyCSS prompt for tiger. My most popular pen on CodePen! Also easily the most recognizable image that I've created.</p>
+            <a href="https://codepen.io/lindakatcodes/pen/MpWPpN" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_4:4,c_pad,b_auto:border/v1509819100/portfolioProjects/Imgs/elephantPng_ojd16h.png" alt="Elephant">
+          <div class="description">
+            <p>A DailyCSS prompt for elephant. This image was one of my first times working with z index.</p>
+            <a href="https://codepen.io/lindakatcodes/pen/EZQdPJ" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project horiz">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_7:5,c_pad,b_auto:border/v1509818889/portfolioProjects/Imgs/wikiPng_izifrc.jpg" alt="Wikipedia search and viewer">
+          <div class="description">
+            <p>A freeCodeCamp project experimenting with the Wikipedia API. It uses autocomplete on the search and brings up a list of results. You can also select a random article!</p>
+            <a href="https://codepen.io/lindakatcodes/full/ozKVbX/" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_4:4,c_pad,b_auto:predominant/v1509818887/portfolioProjects/Imgs/clockPng_jfft5q.png" alt="Clock">
+          <div class="description">
+            <p>A DailyCSS prompt for clock. This image is my first with animation! Thanks to Wes Bos' JavaScript30 course, it gets the local time where the user is and runs like a real clock.</p>
+            <a href="https://codepen.io/lindakatcodes/pen/JNLzPz" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_4:4,c_pad,b_auto:border/v1509819107/portfolioProjects/Imgs/ratchetPng_alca3y.png" alt="Ratchet the Lombax">
+          <div class="description">
+            <p>A DailyCSS prompt for favorite animal. I chose to create the lombax from my all-time favorite video game series, Ratchet & Clank.</p>
+            <a href="https://codepen.io/lindakatcodes/pen/OpxwOO" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project vert">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_5:7,c_pad,b_auto:border/v1509818888/portfolioProjects/Imgs/stampPng_pkodyc.png" alt="Stamp Inventory tracker">
+          <div class="description">
+            <p>I created this to keep track of our self-inking stamp inventory. I wanted to make it easier to see when we need to order more supplies, and to be certain we have enough at any time to fulfill orders.</p>
+            <a href="https://github.com/lindakatcodes/StampInventory" class="viewProject" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+        <div class="project horiz">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_7:5,c_pad,b_auto:border/v1509819116/portfolioProjects/Imgs/twitchPng_prenyi.png" alt="Twitch stream viewer">
+          <div class="description">
+            <p>A freeCodeCamp project using the Twitch API. Showcases a list of streamers, including their name, online status, and details of the current stream if available. Also has the option to filter based on stream status.</p>
+            <a href="https://codepen.io/lindakatcodes/full/BQjRrx/" class="viewProject" target="_blank">View on CodePen</a>
+          </div>
+        </div>
+        <div class="project vert">
+          <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_5:7,c_pad,b_auto:predominant/v1511755598/portfolioProjects/Imgs/deliverysvg_vptcsy.svg" alt="Delivery Form">
+          <div class="description">
+            <p>I created this form to keep a better record of items that are delivered for my employer. I'm using a Google Sheet as the database for this form.</p>
+            <a href="https://res.cloudinary.com/lindakatcodes/image/upload/v1511755660/portfolioProjects/Gifs/2017-11-26_21-48-14_vynksi.gif" class="viewProject" target="_blank">View Gif</a>
+          </div>
+        </div>
+        <div class="project horiz">
+            <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_7:5,c_pad,b_auto:border/v1511751029/portfolioProjects/Imgs/chrome_2017-11-26_20-47-40_ndix9q.png" alt="Current Weather App">
+            <div class="description">
+              <p>A freeCodeCamp project that displays the current weather. My first pass on this I used US zip code to get the information from Open Weather Map. I made a second version that uses geolocation while testing freeCodeCamp's current glitch app for this project.</p>
+              <a href="https://codepen.io/lindakatcodes/full/VKPGrk/" class="viewProject" target="_blank">View on CodePen</a>
+            </div>
+          </div>
+          <div class="project horiz">
+              <img class="pImg" src="https://res.cloudinary.com/lindakatcodes/image/upload/ar_7:5,c_pad,b_auto:predominant/v1511752338/portfolioProjects/Imgs/chrome_2017-11-26_21-11-52_t2v00w.png" alt="Code Breaker Game">
+              <div class="description">
+                <p>A Code School game I completed on a free access weekend. The HTML and CSS was provided, and user tests were given to create all the functionality that makes the game work.</p>
+                <a href="https://lindakatcodes.github.io/CodeBreakerProject/" class="viewProject" target="_blank">View on GitHub</a>
+              </div>
+            </div>
 
-  <div class="main-site">
-    <!-- Projects -->
-    <div class="page-section" id="projects">
-      <h2 class="title">Projects</h2>
-      <div class="flag">
-          <div class="flag__image">
-          <img src="http://jonandlinda.com/codepenphotos/localWeatherApp.jpg" alt="Local Weather App">
-          </div>
-          <div class="flag__body">
-            <p>This task asked us to create a weather app where you could see your local weather, have an icon that changes depending on the weather conditions, and toggle between Fahrenheit and Celcius. This is my first program that gathered information from an API. Since we are using Codepen for our code, there was an extra little hoop to jump through to return the data (cross origin/https technicality), but I managed to get it working without too much trouble. The thing that honestly gave me the most difficulty with this task was the weather icons. I found a set that I liked better than the ones that came with the Open Weather Map API, and it sounded easy to set up. Famous last words, right? It took a lot of tweaking and frustration, and it's still not as clean/perfect as I would like (the spacing is still off and the layered icons don't always line up exactly how I'd like), but it's a lot closer to what I had in mind. The background colors of the labels also change depending on the time of day and the type of the weather. This project is viewable <a href="https://codepen.io/lindakatcodes/full/VKPGrk/" target="_blank">here.</a></p>
-          </div>
-        </div>
-  
-          <div class="flag">
-          <div class="flag__image">
-          <img src="http://jonandlinda.com/codepenphotos/randquotegen.jpg" alt="Random Quote Generator">
-          </div>
-          <div class="flag__body">
-            <p>For the Free Code Camp curriculum, we were tasked with creating a random quote generator. I created a list in another pen of quotes that I wanted to use, and linked that pen to my generator to cycle through the quotes. This task helped me learn more about Javascript functions, including setting up a way to cycle through quotes and colors, ensuring selections weren't immediately repeated, and setting up a Twitter button and how to select where and how a post would end if it was too long for a tweet. It also gave me an inital idea of how to access information from a different source. This project is viewable <a href="https://codepen.io/lindakatcodes/full/kkPzbY/" target="_blank">here.</a></p>
-          </div>
-        </div>
-  
-        <div class="flag">
-          <div class="flag__image">
-            <img src="http://jonandlinda.com/codepenphotos/deliveryformfinal.jpg" alt="Delivery Form">
-          </div>
-          <div class="flag__body">
-            <p>This project came about because I wanted a number pad for a form. I track delivery locations and invoice numbers in my current position, and I had been using a Google form to input this information into a spreadsheet. However, the form didn't have much I could really customize. By creating my own form, I could get the number keypad I so badly wanted, I could stay on the same page once I had entered the information (using a small alert to show it had been logged into the spreadsheet), and I could control the look more.</p>
-          </div>
-        </div>
-  
-        <div class="flag">
-          <div class="flag__image">
-          <img src="http://jonandlinda.com/codepenphotos/logofinal.jpg" alt="Logolinks site">
-          </div>
-          <div class="flag__body">
-            <p>Logolinks was my final project for CS50, Harvard's intro to computer science class given through edX. My partner had told me he'd always wanted a place where he could store links for easy access, similar to bookmarks but a different way of viewing them, where it was easier to copy the links and share them with others. This was what I came up with. This project is viewable <a href="http://logolinks.jonandlinda.com" target="_blank">here.</a></p>
-          </div>
-        </div>
-  
-        <div class="flag">
-          <div class="flag__image">
-            <img src="http://jonandlinda.com/codepenphotos/GPBCOrderForm.jpg" alt="Business Card Order Form">
-          </div>
-          <div class="flag__body">
-            <p>For my first project, I created a business card order form for a company client. They had been sending their orders to us through fax, and had requested a way to be able to email us the information. I volunteered myself and created this, which emails the form information to our sales department. They have been very pleased with it, simple as it is.</p>
-          </div>
-        </div>
-  
-    </div>
-    <!-- Certificates -->
-    <div class="page-section" id="certs">
-      <h2 class="title">Certificates</h2>
+      </div>
+    </section>
+    <!--Certificate Section-->
+    <section id="certificateSection">
+      <h2>Look, I took some classes too!</h2>
       <div class="docs">
-        <img class="doc"  src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/certificates/CS50Cert.jpg" alt="Intro to Computer Science Completion Certificate">
-        <img class="doc"  src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/certificates/learnNodeCert.png" alt="Learn Node Certificate">
-        <img class="doc"  src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/certificates/M101JSCert.png" alt="MongoDB 101 for Node Developers Certificate">
+        <img class="doc" src="https://res.cloudinary.com/lindakatcodes/image/upload/v1511659523/certificates/HarvardX_CS50_Certificate___edX_vmz7mc.png">
+        <img class="doc" src="https://res.cloudinary.com/lindakatcodes/image/upload/v1511659385/certificates/M101JS_-_Course_Completion_Confirmation_avukia.png">
+        <img class="doc" src="https://res.cloudinary.com/lindakatcodes/image/upload/v1511659385/certificates/Learn_Node_Cert_uebfxy.png">
       </div>
-    </div>
-    <!-- Self history -->
-    <div class="page-section" id="history">
-      <h2 class="title">Developer Profile</h2>
-      <div class="bio">
-        <img src="http://jonandlinda.com/lindaDesignPhotos/portfolioPhotos/profilePhoto.jpg" alt="Self portrait" class="selfPic">
-        <div class="story">
-          <p>Hi there! My name's Linda. Thanks for taking the time to check out my page! It means a lot to me.
-          </p> 
-          <p>
-            My main languages are HTML, CSS, and JavaScript. I'm also learning MongoDB.
-          </p>
-          <p>
-            One thing I really want to do more of is work with data. I love tracking inventory and projects, keeping things current and complete, and giving others the ability to easily find out the status of projects so they can do their work more efficiently.
-          </p>
-          <p>
-            I also enjoy playing with creating CSS images and learning about layout techniques. I have a long way to go in this area, but it's fun to experiment with!
-          </p>
-          <p>
-            If you'd like to get ahold of me, all my contact info is below. Thanks for stopping by!
-          </p>
-        </div>
+    </section>
+    <!--About Section-->
+    <section id="aboutSection">
+      <h2>On a personal note...</h2>
+      <div class="about">
+        <img class="profilePhoto" src="https://res.cloudinary.com/lindakatcodes/image/upload/a_hflip,c_crop,r_max,w_900,x_0,y_0/v1511743114/2017-11-26_06.08.33_1_cnpxi3.jpg">
+        <p class="aboutInfo">
+          I've spent most of my working career in administrative and customer service positions, and now I'm interested in switching to building things online. Working in JavaScript is my favorite, though I also enjoy CSS and HTML. 
+          <br><br>
+          I'm also fascinated with data: I've dabbled with MongoDB, Google Sheets, and Airtable as databases (and yes, I love spreadsheets). Having information at your fingertips to help make decisions, analyze trends, and generally geek out over whatever's interesting is so valuable.
+          <br><br>
+          I'm completely self-taught, though I couldn't have gotten to where I am without the help of internet strangers. If you've got something interesting to make, let's get together and see what we can do!
+        </p>
       </div>
-    </div>
-    <!-- Contact -->
-    <div  class="page-section" id="contact">
-      <h2 class="title text-center">Reach out</h2>
+    </section>
+    <!--Contact Section-->
+    <section id="contactSection">
+      <h2>Here's how to find me:</h2>
       <div class="sites">
-        <div class="mainContact">
-          <p><i class="icons fa fa-envelope" aria-hidden="true"></i> Email: lindakt16@gmail.com</p>
-        </div>
-        <div class="links">
-          <a href="https://github.com/lindakatcodes" target="_blank" tooltip="GitHub"><i class="icons fa fa-github fa-2x" aria-hidden="true"></i> Github</a>
-
-          <a href="https://codepen.io/lindakatcodes/" target="_blank" tooltip="CodePen"><i class="icons fa fa-codepen fa-2x" aria-hidden="true"></i> CodePen</a>
-
-          <a href="https://www.linkedin.com/in/linda-thompson-10534847" target="_blank" tooltip="LinkedIn"><i class="icons fa fa-linkedin-square fa-2x" aria-hidden="true"></i> LinkedIn</a>
-
-          <a href="https://twitter.com/lindakatcodes" target="_blank" tooltip="Twitter"><i class="icons fa fa-twitter fa-2x" aria-hidden="true"></i> Twitter</a>
-          <!-- Hiding until I have an actual updated file to put here
-          <a href="" target="_blank" tooltip="resume"><i class="icons fa fa-file-pdf-o fa-2x" aria-hidden="true"></i> Resume</a>
-            -->
-          <a href="https://builtbykat.blogspot.com/" target="_blank" tooltip="blog"><i class="icons fa fa-rss fa-2x" aria-hidden="true"></i> Blog</a>
-
-        </div>
-      </div>
-    </div>
-  </div> <!-- end of main site -->
-
+          <div class="mainContact">
+            <p><a href="mailto:lindakt16@gmail.com"><i class="icons fa fa-envelope" aria-hidden="true"></i></a> Email: lindakt16@gmail.com</p>
+          </div>
+          <div class="links">
+            <a href="https://github.com/lindakatcodes" target="_blank" tooltip="GitHub"><i class="icons fa fa-github fa-2x" aria-hidden="true"></i></a>
+  
+            <a href="https://codepen.io/lindakatcodes/" target="_blank" tooltip="CodePen"><i class="icons fa fa-codepen fa-2x even" aria-hidden="true"></i></a>
+  
+            <a href="https://www.linkedin.com/in/linda-thompson-10534847" target="_blank" tooltip="LinkedIn"><i class="icons fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+  
+            <a href="https://twitter.com/lindakatcodes" target="_blank" tooltip="Twitter"><i class="icons fa fa-twitter fa-2x even" aria-hidden="true"></i></a>
+            <!-- Hiding until I have an actual updated file to put here
+            <a href="https://builtbykat.blogspot.com/" target="_blank" tooltip="blog"><i class="icons fa fa-rss fa-2x" aria-hidden="true"></i></a>
+            <a href="" target="_blank" tooltip="resume"><i class="icons fa fa-file-pdf-o fa-2x" aria-hidden="true"></i> Resume</a>
+          -->
+  
+    </section>
+  </main>
+  <footer>
+  </footer>
+  
   <script>
-    //selects nav section, makes sticky/fixed after opening image is scrolled past
-    const nav = document.querySelector('#navigation');
-    const topOfNav = nav.offsetTop;
-
-    function fixNav() {
-      if (window.scrollY >= topOfNav) {
-        document.body.style.paddingTop = nav.offsetHeight + 'px';
-        document.body.classList.add('fixed-nav');
-      } else {
-        document.body.style.paddingTop = 0;
-        document.body.classList.remove('fixed-nav');
-      }
-    };
-
-    window.addEventListener('scroll', fixNav);
-
     //smooth scroll for jumping to sections on page
     var scroll = new SmoothScroll('a[href*="#"]',{
       header: '[navigation]',

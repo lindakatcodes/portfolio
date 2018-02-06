@@ -1,0 +1,35 @@
+body {
+    font-family: 'Encode Sans';
+    font-size: 16px;
+    color: $gray;
+    margin: 0;
+}
+
+section {
+    h2 {
+        font-family: 'Sansita';
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    @mixin midsize {
+        padding-top: 1.5rem;
+
+        h2 {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    padding: 0 0.5rem;
+}
