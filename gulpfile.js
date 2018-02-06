@@ -10,7 +10,8 @@ mixins = require('postcss-mixins'),
 del = require('del'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
-cssnano = require('gulp-cssnano');
+cssnano = require('gulp-cssnano'),
+uglify = require('gulp-uglify');
 
 gulp.task('styles', function() {
     return gulp.src('./assets/styles/styles.css')
@@ -37,6 +38,10 @@ gulp.task('watch', function() {
     watch('./assets/styles/**/*.css', function() {
         gulp.start('cssStyles');
     });
+
+    watch('./assets/scripts/**/*.js', function() {
+        browserSync.reload();
+    })
 });
 
 gulp.task('cssStyles', ['styles'], function() {
@@ -53,6 +58,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
         './**/*',
         '!./index.html',
         '!./assets/styles/**',
+        '!./assets/scripts/**',
         '!./compiledFiles',
         '!./compiledFiles/**'
     ]
@@ -65,10 +71,11 @@ gulp.task('useminTrigger', ['deleteDistFolder'], function() {
     gulp.start('usemin');
 });
 
-gulp.task('usemin', ['styles'], function() {
+gulp.task('usemin', ['styles', 'scripts'], function() {
     return gulp.src('./index.html')
         .pipe(usemin({
-            css: [function() {return rev()}, function() {return cssnano()}]
+            css: [function() {return rev()}, function() {return cssnano()}],
+            js: [function() {return rev()}, function() {return uglify()}]
         }))
         .pipe(gulp.dest('./currentbuild'));
 });
