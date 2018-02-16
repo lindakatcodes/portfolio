@@ -11,8 +11,10 @@ del = require('del'),
 usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
+webpack = require('webpack'),
 uglify = require('gulp-uglify');
 
+// Uses all the CSS plugins so style files will work as expected
 gulp.task('styles', function() {
     return gulp.src('./assets/styles/styles.css')
     .pipe(postcss([cssImport, mixins, cssVars, nested, autoprefixer]))
@@ -23,6 +25,19 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./compiledFiles/styles'));
 })
 
+// joins all my script files into a single file
+gulp.task('scripts', function(callback) {
+    webpack(require('./webpack.config.js'), function(err, stats) {
+        if (err) {
+            console.log(err.toString());
+        }
+
+        console.log(stats.toString());
+        callback();
+    })
+})
+
+// Watch task - showing everything for local development
 gulp.task('watch', function() {
     browserSync.init({
         notify: false,
@@ -40,19 +55,26 @@ gulp.task('watch', function() {
     });
 
     watch('./assets/scripts/**/*.js', function() {
-        browserSync.reload();
+        gulp.start('scriptsRefresh');
     })
 });
 
+// Puts a compiled CSS file into a new folder
 gulp.task('cssStyles', ['styles'], function() {
     return gulp.src('./compiledFiles/styles/styles.css')
     .pipe(browserSync.stream());
 })
 
+gulp.task('scriptsRefresh', ['scripts'], function() {
+    browserSync.reload();
+})
+
+// Build task - remove the previous version of my files so nothing's contaminated
 gulp.task('deleteDistFolder', function() {
     return del('./currentbuild');
 });
 
+// Build task - copies all of the needed files into a central location
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
     var pathsToCopy = [
         './**/*',
@@ -67,6 +89,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
         .pipe(gulp.dest('./currentbuild'));
 });
 
+// Build task - triggers the usemin task, which minimizes the css and js files
 gulp.task('useminTrigger', ['deleteDistFolder'], function() {
     gulp.start('usemin');
 });
@@ -80,4 +103,5 @@ gulp.task('usemin', ['styles', 'scripts'], function() {
         .pipe(gulp.dest('./currentbuild'));
 });
 
+// Actual build - runs all needed tasks
 gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']);
