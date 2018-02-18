@@ -47,7 +47,7 @@
 
 @mixin midsize {
     .links {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .mainContact {
@@ -61,7 +61,7 @@
     .profilePhoto {
         height: 18rem;
         margin-right: 3%;
-        margin-top: 0.5rem;
+        margin-top: 0rem;
     }
 
     .aboutInfo {
@@ -89,10 +89,21 @@
         text-align: left;
     }
 
-    .links {
+    .mainContact {
         font-size: 1.7rem;
-        justify-content: space-between;
-        margin-left: 5%;
-        margin-top: 2%;
+        margin-top: -1%;
+        
+        .icons {
+            font-size: 1.8rem;
+            padding-left: 1%;
+        }
+    }
+
+    .links {
+        font-size: 1.8rem;
+        justify-content: space-around;
+        margin-top: 1%;
+        margin-left: 1%;
+        padding: 0 1rem 0 0;
     }
 }

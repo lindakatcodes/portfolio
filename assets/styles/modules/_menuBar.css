@@ -2,16 +2,14 @@
     padding: 10px 0;
     width: 100%;
     padding: 0 15px;
-    background-color: $green;
+    background-color: $gray;
     position: fixed;
-    z-index: 2;
 }
 
 .menuContent {
-    text-align: center;
+    text-align: right;
     position: relative;
     padding-top: 0;
-    transform: scale(1);
 }
 
 .nav {
@@ -21,18 +19,23 @@
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     li {
         list-style: none;
-        padding: 0.2rem;
+        padding: 0.3rem 1rem;
     
         a {
             color: $white;
             text-decoration: none;
         }
     }
+}
 
+@mixin midsize {
+    .nav ul {
+        justify-content: flex-end;
+    }
 }
 
