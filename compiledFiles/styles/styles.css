@@ -1,7 +1,7 @@
 body {
     font-family: 'Encode Sans';
     font-size: 16px;
-    color: #3f3f3f;
+    color: #202018;
     margin: 0;
 }
 section h2 {
@@ -33,7 +33,7 @@ img {
     padding: 10px 0;
     width: 100%;
     padding: 0 15px;
-    background-color: #3f3f3f;
+    background-color: #202018;
     position: fixed;
 }
 .menuContent {
@@ -58,7 +58,8 @@ img {
         padding: 0.3rem 1rem;
     }
 .nav li a {
-            color: #fffffa;
+            font-size: 1.2rem;
+            color: #889888;
             text-decoration: none;
         }
 @media (min-width: 600px) {
@@ -85,10 +86,10 @@ img {
         font-size: 2.55rem;
         font-family: 'Sansita';
         text-shadow: 
-            -1px -1px 0 #3f3f3f,
-            1px -1px 0 #3f3f3f,
-            -3px 1.5px 0 #3f3f3f,
-            1px 1px 0 #3f3f3f;
+            -1px -1px 0 #202018,
+            1px -1px 0 #202018,
+            -3px 1.5px 0 #202018,
+            1px 1px 0 #202018;
     }
 .hero h2 {
         position: absolute;
@@ -100,10 +101,10 @@ img {
         font-size: 1.5 rem;
         font-family: 'Sansita';
         text-shadow: 
-            -1px -1px 0 #3f3f3f,
-            1px -1px 0 #3f3f3f,
-            -3px 1.5px 0 #3f3f3f,
-            1px 1px 0 #3f3f3f;
+            -1px -1px 0 #202018,
+            1px -1px 0 #202018,
+            -3px 1.5px 0 #202018,
+            1px 1px 0 #202018;
     }
 @media (min-width: 600px) {
         .hero h1 {
@@ -154,32 +155,32 @@ img {
   }
     }
 .project {
-  border: 2px solid #3f3f3f;
+  border: 2px solid #202018;
   text-align: center;
   display: grid;
   grid-auto-flow: row;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  -webkit-box-shadow: 3px 6px 15px #8e8683;
-          box-shadow: 3px 6px 15px #8e8683;
+  -webkit-box-shadow: 3px 6px 15px #202018;
+          box-shadow: 3px 6px 15px #202018;
 }
 .description {
   padding: 0 4%;
 }
 .pImg {
   width: 100%;
-  border-bottom: 2px solid #3f3f3f;
+  border-bottom: 2px solid #202018;
 }
 .viewProject {
-  background-color: #8e8683;
+  background-color: #406890;
   color: #fffffa;
   font-size: 1.1rem;
   text-decoration: none;
   display: inline-block;
   padding: 1rem 1.5rem;
   margin-bottom: 3%;
-  border: 1.5px solid #3f3f3f;
-  text-shadow: 2px 1.5px 1px #3f3f3f;
+  border: 1.5px solid #202018;
+  text-shadow: 2px 1.5px 1px #202018;
 }
 .docs {
     display: grid;
@@ -191,9 +192,9 @@ img {
 .doc {
     width: 100%;
     height: auto;
-    border: 2px solid #3f3f3f;
-    -webkit-box-shadow: 3px 6px 15px #8e8683;
-            box-shadow: 3px 6px 15px #8e8683;
+    border: 2px solid #202018;
+    -webkit-box-shadow: 3px 6px 15px #202018;
+            box-shadow: 3px 6px 15px #202018;
 }
 .profilePhoto {
     height: 15rem;
@@ -215,11 +216,11 @@ img {
 }
 .mainContact {
     font-size: 1.3rem;
-    color: #3f3f3f;
+    color: #202018;
 }
 .mainContact .icons {
         font-size: 1.4rem;
-        color: #9dafc5;
+        color: #406890;
         margin-right: 0.15rem;
     }
 .links {
@@ -233,10 +234,10 @@ img {
     margin: 0 auto;
 }
 .icons {
-    color: #5c8275;
+    color: #889888;
 }
 .icons.even {
-    color: #9dafc5;
+    color: #406890;
 }
 @media (min-width: 600px) {
     .links {

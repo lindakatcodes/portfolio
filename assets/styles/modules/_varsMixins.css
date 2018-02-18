@@ -1,8 +1,8 @@
-$blue: #9dafc5;
-$green: #5c8275;
+$blue: #406890;
+$green: #889888;
 $white: #fffffa;
-$tan: #8e8683;
-$gray: #3f3f3f;
+$tan: #a09898;
+$gray: #202018;
 
 @define-mixin midsize {
     @media (min-width: 600px) {
