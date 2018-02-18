@@ -71,7 +71,7 @@ gulp.task('scriptsRefresh', ['scripts'], function() {
 
 // Build task - remove the previous version of my files so nothing's contaminated
 gulp.task('deleteDistFolder', function() {
-    return del('./currentbuild');
+    return del('./docs');
 });
 
 // Build task - copies all of the needed files into a central location
@@ -86,7 +86,7 @@ gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
     ]
 
     return gulp.src(pathsToCopy)
-        .pipe(gulp.dest('./currentbuild'));
+        .pipe(gulp.dest('./docs'));
 });
 
 // Build task - triggers the usemin task, which minimizes the css and js files
@@ -100,7 +100,7 @@ gulp.task('usemin', ['styles', 'scripts'], function() {
             css: [function() {return rev()}, function() {return cssnano()}],
             js: [function() {return rev()}, function() {return uglify()}]
         }))
-        .pipe(gulp.dest('./currentbuild'));
+        .pipe(gulp.dest('./docs'));
 });
 
 // Actual build - runs all needed tasks
