@@ -16,13 +16,13 @@ uglify = require('gulp-uglify');
 
 // Uses all the CSS plugins so style files will work as expected
 gulp.task('styles', function() {
-    return gulp.src('./assets/styles/styles.css')
+    return gulp.src('./site/assets/styles/styles.css')
     .pipe(postcss([cssImport, mixins, cssVars, nested, autoprefixer]))
     .on('error', function(errorInfo) {
         console.log(errorInfo.toString());
         this.emit('end');
     })
-    .pipe(gulp.dest('./compiledFiles/styles'));
+    .pipe(gulp.dest('./site/compiledFiles/styles'));
 })
 
 // joins all my script files into a single file
@@ -42,26 +42,26 @@ gulp.task('watch', function() {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: './'
+            baseDir: './site'
         }
     });
 
-    watch('./index.html', function() {
+    watch('./site/index.html', function() {
         browserSync.reload();
     });
 
-    watch('./assets/styles/**/*.css', function() {
+    watch('./site/assets/styles/**/*.css', function() {
         gulp.start('cssStyles');
     });
 
-    watch('./assets/scripts/**/*.js', function() {
+    watch('./site/assets/scripts/**/*.js', function() {
         gulp.start('scriptsRefresh');
     })
 });
 
 // Puts a compiled CSS file into a new folder
 gulp.task('cssStyles', ['styles'], function() {
-    return gulp.src('./compiledFiles/styles/styles.css')
+    return gulp.src('./site/compiledFiles/styles/styles.css')
     .pipe(browserSync.stream());
 })
 
@@ -77,12 +77,12 @@ gulp.task('deleteDistFolder', function() {
 // Build task - copies all of the needed files into a central location
 gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
     var pathsToCopy = [
-        './**/*',
-        '!./index.html',
-        '!./assets/styles/**',
-        '!./assets/scripts/**',
-        '!./compiledFiles',
-        '!./compiledFiles/**'
+        './site/**/*',
+        '!./site/index.html',
+        '!./site/assets/styles/**',
+        '!./site/assets/scripts/**',
+        '!./site/compiledFiles',
+        '!./site/compiledFiles/**'
     ]
 
     return gulp.src(pathsToCopy)
@@ -95,7 +95,7 @@ gulp.task('useminTrigger', ['deleteDistFolder'], function() {
 });
 
 gulp.task('usemin', ['styles', 'scripts'], function() {
-    return gulp.src('./index.html')
+    return gulp.src('./site/index.html')
         .pipe(usemin({
             css: [function() {return rev()}, function() {return cssnano()}],
             js: [function() {return rev()}, function() {return uglify()}]
@@ -104,4 +104,4 @@ gulp.task('usemin', ['styles', 'scripts'], function() {
 });
 
 // Actual build - runs all needed tasks
-gulp.task('build', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']);
+gulp.task('makesite', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']);
