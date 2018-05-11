@@ -233,7 +233,7 @@ img {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     font-size: 1.1rem; 
-    max-width: 800px;
+    max-width: 70%;
     margin: 0 auto;
 }
 .icons {
