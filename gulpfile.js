@@ -1,43 +1,18 @@
-const gulp = require('gulp'),
-watch = require('gulp-watch'),
-browserSync = require('browser-sync').create(),
-postcss = require('gulp-postcss'),
-autoprefixer = require('autoprefixer'),
-cssVars = require('postcss-simple-vars'),
-nested = require('postcss-nested'),
-cssImport = require('postcss-import'),
-mixins = require('postcss-mixins'),
-del = require('del'),
-usemin = require('gulp-usemin'),
-rev = require('gulp-rev'),
-cssnano = require('gulp-cssnano'),
-webpack = require('webpack'),
-uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const watch = require('gulp-watch');
+const browserSync = require('browser-sync').create();
+const del = require('del');
+const rev = require('gulp-rev');
+const prefixer = require('gulp-autoprefixer');
+const csso = require('gulp-csso');
+const uglify = require('gulp-uglify-es').default;
+const concat = require('gulp-concat');
+const resizeImg = require('gulp-image-resize');
+const reduceImg = require('gulp-imagemin');
+const renameImg = require('gulp-rename');
 
-// Uses all the CSS plugins so style files will work as expected
-gulp.task('styles', function() {
-    return gulp.src('./site/assets/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssVars, nested, autoprefixer]))
-    .on('error', function(errorInfo) {
-        console.log(errorInfo.toString());
-        this.emit('end');
-    })
-    .pipe(gulp.dest('./site/compiledFiles/styles'));
-})
 
-// joins all my script files into a single file
-gulp.task('scripts', function(callback) {
-    webpack(require('./webpack.config.js'), function(err, stats) {
-        if (err) {
-            console.log(err.toString());
-        }
-
-        console.log(stats.toString());
-        callback();
-    })
-})
-
-// Watch task - showing everything for local development
+// Watch task - sets up browserSync & reloads on changes
 gulp.task('watch', function() {
     browserSync.init({
         notify: false,
@@ -59,49 +34,67 @@ gulp.task('watch', function() {
     })
 });
 
-// Puts a compiled CSS file into a new folder
+// Concat & minify CSS files
+gulp.task('styles', function() {
+    return gulp.src('./site/assets/styles/styles.css')
+    .pipe(prefixer())
+    .pipe(csso())
+    .pipe(rev())
+    .pipe(gulp.dest('./site/compiledFiles/styles'));
+}) 
+
+// get compiled CSS file and send to browserSync for live reload
 gulp.task('cssStyles', ['styles'], function() {
     return gulp.src('./site/compiledFiles/styles/styles.css')
     .pipe(browserSync.stream());
 })
 
+// Minify JS files and output compiled file
+gulp.task('scripts', function() {
+    return gulp.src('./site/assets/scripts/scripts.js')
+    .pipe(uglify())
+    .pipe(rev())
+    .pipe(gulp.dest('./site/assets/compiledFiles/scripts'))
+})
+
+// get compiled file and send to browserSync for live reload
 gulp.task('scriptsRefresh', ['scripts'], function() {
     browserSync.reload();
 })
 
-// Build task - remove the previous version of my files so nothing's contaminated
+// Task to reduce, resize, and rename images
+gulp.task('reduce-images', ['deleteOptImgs'], function() {
+    gulp.src('./site/assets/images/**/*.{jpg, png}') 
+        .pipe(resizeImg({ 
+            width: 800, 
+            quality: 0.5
+        }))
+        .pipe(reduceImg()) 
+        .pipe(renameImg(function (path) { path.basename += "-optimized"; })) 
+        .pipe(gulp.dest('./site/assets/images/optimized'))
+});
+
+// Build tasks - remove the previous version of my files so nothing's contaminated
 gulp.task('deleteDistFolder', function() {
     return del('./docs');
 });
 
+gulp.task('deleteOptImgs', function() {
+    return del('./site/assets/images/optimized');
+});
+
 // Build task - copies all of the needed files into a central location
-gulp.task('copyGeneralFiles', ['deleteDistFolder'], function() {
+gulp.task('copyFiles', ['deleteDistFolder'], function() {
     var pathsToCopy = [
-        './site/**/*',
-        '!./site/index.html',
-        '!./site/assets/styles/**',
-        '!./site/assets/scripts/**',
-        '!./site/compiledFiles',
-        '!./site/compiledFiles/**'
+        './site/index.html',
+        './site/compiledFiles/scripts/**',
+        './site/compiledFiles/styles/**',
+        './site/assets/images/optimized/**'
     ]
 
     return gulp.src(pathsToCopy)
         .pipe(gulp.dest('./docs'));
 });
 
-// Build task - triggers the usemin task, which minimizes the css and js files
-gulp.task('useminTrigger', ['deleteDistFolder'], function() {
-    gulp.start('usemin');
-});
-
-gulp.task('usemin', ['styles', 'scripts'], function() {
-    return gulp.src('./site/index.html')
-        .pipe(usemin({
-            css: [function() {return rev()}, function() {return cssnano()}],
-            js: [function() {return rev()}, function() {return uglify()}]
-        }))
-        .pipe(gulp.dest('./docs'));
-});
-
 // Actual build - runs all needed tasks
-gulp.task('makesite', ['deleteDistFolder', 'copyGeneralFiles', 'useminTrigger']);
+gulp.task('build', ['deleteDistFolder', 'deleteOptImgs', 'reduce-images', 'styles', 'scripts', 'copyFiles']);
