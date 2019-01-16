@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "name": "Project 1",
+            "image": "./site/assets/images/projects/image1.jpg",
+            "description": "Sample project",
+            "link": "http://www.lindakat.com/1"
+        },
+        {
+            "name": "Project 2",
+            "image": "./site/assets/images/projects/image2.jpg",
+            "description": "Sample project again",
+            "link": "http://www.lindakat.com/2"
+        }
+    ],
+    "certificates": [
+        {
+            "class": "Udacity MWS",
+            "cert": "./site/assets/images/certificates/pic.jpg"
+        }
+    ]
+}
