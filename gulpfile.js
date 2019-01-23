@@ -17,45 +17,46 @@ gulp.task('watch', function() {
     browserSync.init({
         notify: false,
         server: {
-            baseDir: './site'
+            baseDir: './site',
+            index: 'index-new.html'
         },
         port: 8080
     });
 
-    watch('./site/index.html', function() {
+    watch('./site/index-new.html', function() {
         browserSync.reload();
     });
 
-    watch('./site/assets/styles/**/*.css', function() {
+    watch('./site/css/**/*.css', function() {
         gulp.start('cssStyles');
     });
 
-    watch('./site/assets/scripts/**/*.js', function() {
+    watch('./site/js/**/*.js', function() {
         gulp.start('scriptsRefresh');
     });
 });
 
 // Concat & minify CSS files
 gulp.task('styles', function() {
-    return gulp.src('./site/assets/styles/styles.css')
+    return gulp.src('./site/css/styles.css')
     .pipe(prefixer())
     .pipe(csso())
     .pipe(rev())
-    .pipe(gulp.dest('./site/compiledFiles/styles'));
+    .pipe(gulp.dest('./site/css/'));
 });
 
 // get compiled CSS file and send to browserSync for live reload
 gulp.task('cssStyles', gulp.series('styles', function() {
-    return gulp.src('./site/compiledFiles/styles/styles.css')
+    return gulp.src('./site/css/compiled-styles.css')
     .pipe(browserSync.stream());
 }));
 
 // Minify JS files and output compiled file
 gulp.task('scripts', function() {
-    return gulp.src('./site/assets/scripts/scripts.js')
+    return gulp.src('./site/js/scripts.js')
     .pipe(uglify())
     .pipe(rev())
-    .pipe(gulp.dest('./site/compiledFiles/scripts'))
+    .pipe(gulp.dest('./site/js/'))
 });
 
 // get compiled file and send to browserSync for live reload
@@ -65,7 +66,7 @@ gulp.task('scriptsRefresh', gulp.series('scripts', function() {
 
 // Build tasks - remove the previous version of my files so nothing's contaminated
 gulp.task('deleteDistFolder', function() {
-    return del('./docs');
+    return del('./dist');
 });
 
 gulp.task('deleteOptImgs', function() {
@@ -88,14 +89,14 @@ gulp.task('reduce-images', gulp.series('deleteOptImgs', function(done) {
 // Build task - copies all of the needed files into a central location
 gulp.task('copyFiles', gulp.series('deleteDistFolder', function() {
     var pathsToCopy = [
-        './site/index.html',
-        './site/compiledFiles/scripts/**',
-        './site/compiledFiles/styles/**',
+        './site/index-new.html',
+        './site/js/scripts-*.js',
+        './site/css/styles-*.css',
         './site/assets/images/optimized/**'
     ]
 
     return gulp.src(pathsToCopy)
-        .pipe(gulp.dest('./docs'));
+        .pipe(gulp.dest('./dist'));
 }));
 
 // Actual build - runs all needed tasks
