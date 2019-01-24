@@ -1,21 +1,77 @@
-const gulp = require('gulp');
-const watch = require('gulp-watch');
+const { src, dest, watch, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
 const del = require('del');
-const rev = require('gulp-rev');
 const prefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify-es').default;
-//const concat = require('gulp-concat');
+const htmlmin = require('gulp-htmlmin');
 const resizeImg = require('gulp-image-resize');
 const reduceImg = require('gulp-imagemin');
 const renameImg = require('gulp-rename');
 
+// take working CSS files, prefix & compress, then send to dist
+function prepCSS() {
+    return src('./site/css/styles.css', { sourcemaps: true })
+    .pipe(prefixer())
+    .pipe(csso())
+    .pipe(dest('./dist/css', { sourcemaps: '.' }));
+}
 
-// Watch task - sets up browserSync & reloads on changes
-gulp.task('watch', function() {
+// take working JS files, compress, then send to dist
+function prepJS() {
+    return src('./site/js/scripts.js', { sourcemaps: true })
+    .pipe(uglify())
+    .pipe(dest('./dist/js', { sourcemaps: '.' }));
+}
+
+// grab HTML files, minify, then send to dist
+function prepHTML() {
+    return src('./site/index-new.html', { sourcemaps: true })
+    .pipe(htmlmin())
+    .pipe(dest('./dist', { sourcemaps: '.' }));
+}
+
+// optimize images (med & small sizes) & mark filename for size
+function optMedImages(cb) {
+    src('./site/assets/images/**/*.+(jpg|png)') 
+        // mid size files
+        .pipe(resizeImg({ 
+            percentage: 75, 
+            quality: 0.75
+        }))
+        .pipe(reduceImg()) 
+        .pipe(renameImg(function (path) { path.basename += "-med"; })) 
+        .pipe(dest('./site/assets/images/optimized'))
+        .pipe(dest('./dist/assets/images'))
+        cb();
+}
+
+function optSmallImages(cb) {
+    src('./site/assets/images/**/*.+(jpg|png)')
+    // small files
+    .pipe(resizeImg({ 
+        percentage: 50, 
+        quality: 0.5
+    }))
+    .pipe(reduceImg()) 
+    .pipe(renameImg(function (path) { path.basename += "-small"; }))
+    .pipe(dest('./site/assets/images/optimized'))
+    .pipe(dest('./dist/assets/images'))
+    cb();
+}
+
+// clean functions - remove current folders, to avoid contamination of data
+function cleanDistFiles() {
+    return del('./dist/*.html', './dist/css', './dist/js')
+}
+
+function cleanImages() {
+    return del('./site/assets/images/optimized', './dist/assets/images')
+}
+
+// browser-sync & watch function for live testing
+function watcher() {
     browserSync.init({
-        notify: false,
         server: {
             baseDir: './site',
             index: 'index-new.html'
@@ -23,81 +79,17 @@ gulp.task('watch', function() {
         port: 8080
     });
 
-    watch('./site/index-new.html', function() {
-        browserSync.reload();
-    });
+    watch('./site/*.html', series(prepHTML, browserSync.reload));
+    watch('./site/css/*.css', series(prepCSS, browserSync.reload));
+    watch('./site/js/*js', series(prepJS, browserSync.reload));
+}
 
-    watch('./site/css/**/*.css', function() {
-        gulp.start('cssStyles');
-    });
+// exports / task names
+exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages));
 
-    watch('./site/js/**/*.js', function() {
-        gulp.start('scriptsRefresh');
-    });
-});
+exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS));
 
-// Concat & minify CSS files
-gulp.task('styles', function() {
-    return gulp.src('./site/css/styles.css')
-    .pipe(prefixer())
-    .pipe(csso())
-    .pipe(rev())
-    .pipe(gulp.dest('./site/css/'));
-});
+exports.fullBuild = series(parallel(cleanDistFiles, cleanImages), 
+    parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages));
 
-// get compiled CSS file and send to browserSync for live reload
-gulp.task('cssStyles', gulp.series('styles', function() {
-    return gulp.src('./site/css/compiled-styles.css')
-    .pipe(browserSync.stream());
-}));
-
-// Minify JS files and output compiled file
-gulp.task('scripts', function() {
-    return gulp.src('./site/js/scripts.js')
-    .pipe(uglify())
-    .pipe(rev())
-    .pipe(gulp.dest('./site/js/'))
-});
-
-// get compiled file and send to browserSync for live reload
-gulp.task('scriptsRefresh', gulp.series('scripts', function() {
-    browserSync.reload();
-}));
-
-// Build tasks - remove the previous version of my files so nothing's contaminated
-gulp.task('deleteDistFolder', function() {
-    return del('./dist');
-});
-
-gulp.task('deleteOptImgs', function() {
-    return del('./site/assets/images/optimized');
-});
-
-// Task to reduce, resize, and rename images
-gulp.task('reduce-images', gulp.series('deleteOptImgs', function(done) {
-    gulp.src('./site/assets/images/**/*.+(jpg|png)') 
-        .pipe(resizeImg({ 
-            width: 800, 
-            quality: 0.5
-        }))
-        .pipe(reduceImg()) 
-        .pipe(renameImg(function (path) { path.basename += "-optimized"; })) 
-        .pipe(gulp.dest('./site/assets/images/optimized'))
-        done();
-}));
-
-// Build task - copies all of the needed files into a central location
-gulp.task('copyFiles', gulp.series('deleteDistFolder', function() {
-    var pathsToCopy = [
-        './site/index-new.html',
-        './site/js/scripts-*.js',
-        './site/css/styles-*.css',
-        './site/assets/images/optimized/**'
-    ]
-
-    return gulp.src(pathsToCopy)
-        .pipe(gulp.dest('./dist'));
-}));
-
-// Actual build - runs all needed tasks
-gulp.task('build', gulp.series('deleteDistFolder', 'deleteOptImgs', 'reduce-images', 'styles', 'scripts', 'copyFiles'));
+exports.watch = watcher;
