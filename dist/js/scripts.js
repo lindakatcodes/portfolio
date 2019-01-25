@@ -1,2 +1,2 @@
-var smoothScroll=require("smooth-scroll"),scroll=new smoothScroll('a[href*="#"]',{header:"[navigation]",speed:1200,easing:"easeInOutQuad"});alert("wahoo!");
+const dataURL="http://localhost:8080/assets/data/datafile.json",dataDiv=document.querySelector(".datadiv");function projectBlock(t){return[t.name,t.image,t.description,t.link]}const results=fetch(dataURL).then(t=>t.json()).then(t=>{const e=t.projects;console.log(e)});
 //# sourceMappingURL=scripts.js.map

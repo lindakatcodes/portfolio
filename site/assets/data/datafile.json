@@ -3,12 +3,14 @@
         {
             "name": "Project 1",
             "image": "./site/assets/images/projects/image1.jpg",
+            "altText": "text for image 1",
             "description": "Sample project",
             "link": "http://www.lindakat.com/1"
         },
         {
             "name": "Project 2",
             "image": "./site/assets/images/projects/image2.jpg",
+            "altText": "text for image 1",
             "description": "Sample project again",
             "link": "http://www.lindakat.com/2"
         }

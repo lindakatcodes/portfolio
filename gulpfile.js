@@ -1,5 +1,6 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
+const reload = browserSync.reload;
 const del = require('del');
 const prefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
@@ -79,9 +80,9 @@ function watcher() {
         port: 8080
     });
 
-    watch('./site/*.html', series(prepHTML, browserSync.reload));
-    watch('./site/css/*.css', series(prepCSS, browserSync.reload));
-    watch('./site/js/*js', series(prepJS, browserSync.reload));
+    watch('./site/*.html', { delay: 100 }, series(prepHTML, reload));
+    watch('./site/css/*.css', { delay: 100 }, series(prepCSS, reload));
+    watch('./site/js/*js', { delay: 100 }, series(prepJS, reload));
 }
 
 // exports / task names
