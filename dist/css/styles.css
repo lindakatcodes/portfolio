@@ -1,3 +1,2 @@
-:root{--mainBlue: #006699;--mainGreen: #339966;--darkGray: #403B41;--serif: 'David Libre', serif;--sansSerif: 'Arimo', sans-serif
-}
+:root{--mainBlue: #006699;--mainGreen: #339966;--darkGray: #403B41;--serif: 'David Libre', serif;--sansSerif: 'Arimo', sans-serif}main{font-size:16pt;background-color:var(--darkGray);height:100%;width:100%}.hero h2,.hero h3{text-align:center;color:var(--mainBlue);font:var(--serif);font-size:40pt}.hero h3{color:var(--mainGreen);font:var(--sansSerif);font-size:26pt}.mainIcons img{width:15%}.mainIcons{display:flex;justify-content:center}
 /*# sourceMappingURL=styles.css.map */

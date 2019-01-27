@@ -1,6 +1,5 @@
 const { src, dest, watch, series, parallel } = require('gulp');
 const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
 const del = require('del');
 const prefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
@@ -9,6 +8,12 @@ const htmlmin = require('gulp-htmlmin');
 const resizeImg = require('gulp-image-resize');
 const reduceImg = require('gulp-imagemin');
 const renameImg = require('gulp-rename');
+
+// defining reload as it's own function
+function reload(done) {
+    browserSync.reload();
+    done();
+}
 
 // take working CSS files, prefix & compress, then send to dist
 function prepCSS() {
@@ -61,6 +66,12 @@ function optSmallImages(cb) {
     cb();
 }
 
+// copy icon images over to dist folder
+function copyIcons() {
+    return src('./site/assets/icons/*.svg')
+    .pipe(dest('./dist/assets/icons'));
+}
+
 // clean functions - remove current folders, to avoid contamination of data
 function cleanDistFiles() {
     return del('./dist/*.html', './dist/css', './dist/js')
@@ -91,6 +102,6 @@ exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages))
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS));
 
 exports.fullBuild = series(parallel(cleanDistFiles, cleanImages), 
-    parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages));
+    parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages, copyIcons));
 
 exports.watch = watcher;
