@@ -1,24 +1,73 @@
 {
     "projects": [
         {
-            "name": "Project 1",
-            "image": "./site/assets/images/projects/image1.jpg",
-            "altText": "text for image 1",
-            "description": "Sample project",
-            "link": "http://www.lindakat.com/1"
+            "name": "Restaurant Reviews",
+            "image": [
+                "./site/assets/images/projects/restaurantReviews.png"
+            ],
+            "altText": "Photo of Restaurant Reviews Website",
+            "description": "An application created during the Grow with Google / Udacity Mobile Web Specialist Nanodegree course. This site allows users to favorite, store, & add reviews for a list of restaurants.",
+            "tech": "HTML, CSS, JS, Service Workers, IndexedDB / idb",
+            "siteLink": "https://mws-reviews-app-lt.netlify.com/",
+            "codeLink": "https://github.com/lindakatcodes/mws-restaurant-project"
         },
         {
-            "name": "Project 2",
-            "image": "./site/assets/images/projects/image2.jpg",
-            "altText": "text for image 1",
-            "description": "Sample project again",
-            "link": "http://www.lindakat.com/2"
+            "name": "Stamp Inventory",
+            "image": [
+                "./site/assets/images/projects/stampTracker.png"
+            ],
+            "altText": "Photo of Stamp Inventory Tracking Website",
+            "description": "A simple site created to show the current inventory for self-inking stamp supplies, with a form to update when supplies are used or received.",
+            "tech": "HTML, CSS, JS, Google Sheets API",
+            "siteLink": "https://drive.google.com/open?id=1f8X0eCXDhnrG89FgEAn5r-kL5IbXwxfm",
+            "codeLink": "https://github.com/lindakatcodes/StampInventory"
+        },
+        {
+            "name": "Daily CSS Images",
+            "image":[
+                "./site/assets/images/projects/cssHobbes.png",
+                "./site/assets/images/projects/cssElephant.png"
+            ],
+            "altText": "Photos of a tiger and elephant drawn with CSS",
+            "description": "Images created using CSS, following prompts from a daily email. Intended to help improve my CSS understanding & skills.",
+            "tech": "HTML, CSS",
+            "siteLink": "",
+            "codeLink": "https://codepen.io/collection/nmzkYx/"
+        },
+        {
+            "name": "Free Code Camp Projects",
+            "image": [
+                "./site/assets/images/projects/randomQuote.png",
+                "./site/assets/images/projects/weather.png",
+                "./site/assets/images/projects/wikiViewer.png"
+            ],
+            "altText": "Photos of projects completed using the Free Code Camp Website",
+            "description": "Projects created while working through the Free Code Camp curriculum. Through these projects, I worked with new API's, learned how to import data from sites, & started learning more about styling and testing. I also improved some of the documentation for Free Code Camp's weather API source.",
+            "tech": "HTML, CSS, JS",
+            "siteLink": "",
+            "codeLink": "https://codepen.io/collection/nRGemQ/"
         }
     ],
     "certificates": [
         {
-            "class": "Udacity MWS",
-            "cert": "./site/assets/images/certificates/pic.jpg"
+            "class": "Mobile Web Specialist",
+            "cert": "./site/assets/images/certificates/MWS_Certificate.png"
+        },
+        {
+            "class": "Git a Web Developer Job",
+            "cert": "./site/assets/images/certificates/GitWebDev_Certificate.png"
+        },
+        {
+            "class": "MongoDB 101JS",
+            "cert": "./site/assets/images/certificates/M101JS_Certificate.png"
+        },
+        {
+            "class": "Learn Node",
+            "cert": "./site/assets/images/certificates/Learn_Node_Certificate.png"
+        },
+        {
+            "class": "CS50",
+            "cert": "./site/assets/images/certificates/HarvardX_CS50_Certificate.png"
         }
     ]
 }

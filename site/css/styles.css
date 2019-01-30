@@ -2,15 +2,16 @@
     --mainBlue: #006699;
     --mainGreen: #339966;
     --darkGray: #403B41;
+    --softGray: #DEDEDE;
     --serif: 'David Libre', serif;
     --sansSerif: 'Arimo', sans-serif;
 }
 
-main {
+html {
     font-size: 16pt;
-    background-color: var(--darkGray);
-    height: 100%;
-    width: 100%;
+    background-color: var(--softGray);
+    height: 100vh;
+    width: 100vw;
 }
 
 .hero h2 {
@@ -27,11 +28,12 @@ main {
     font-size: 26pt;
 }
 
-.mainIcons img{
+.introIcons img{
     width: 15%;
+    padding: 0 4vw;
+    color: var(--darkGray);
 }
 
-.mainIcons {
-    display: flex;
-    justify-content: center;
+.introIcons {
+    text-align: center;
 }
