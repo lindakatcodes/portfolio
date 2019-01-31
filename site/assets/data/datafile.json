@@ -3,7 +3,7 @@
         {
             "name": "Restaurant Reviews",
             "image": [
-                "./site/assets/images/projects/restaurantReviews.png"
+                "assets/images/projects/restaurantReviews.png"
             ],
             "altText": "Photo of Restaurant Reviews Website",
             "description": "An application created during the Grow with Google / Udacity Mobile Web Specialist Nanodegree course. This site allows users to favorite, store, & add reviews for a list of restaurants.",
@@ -14,7 +14,7 @@
         {
             "name": "Stamp Inventory",
             "image": [
-                "./site/assets/images/projects/stampTracker.png"
+                "assets/images/projects/stampTracker.png"
             ],
             "altText": "Photo of Stamp Inventory Tracking Website",
             "description": "A simple site created to show the current inventory for self-inking stamp supplies, with a form to update when supplies are used or received.",
@@ -25,8 +25,8 @@
         {
             "name": "Daily CSS Images",
             "image":[
-                "./site/assets/images/projects/cssHobbes.png",
-                "./site/assets/images/projects/cssElephant.png"
+                "assets/images/projects/cssHobbes.png",
+                "assets/images/projects/cssElephant.png"
             ],
             "altText": "Photos of a tiger and elephant drawn with CSS",
             "description": "Images created using CSS, following prompts from a daily email. Intended to help improve my CSS understanding & skills.",
@@ -37,9 +37,9 @@
         {
             "name": "Free Code Camp Projects",
             "image": [
-                "./site/assets/images/projects/randomQuote.png",
-                "./site/assets/images/projects/weather.png",
-                "./site/assets/images/projects/wikiViewer.png"
+                "assets/images/projects/randomQuote.png",
+                "assets/images/projects/weather.png",
+                "assets/images/projects/wikiViewer.jpg"
             ],
             "altText": "Photos of projects completed using the Free Code Camp Website",
             "description": "Projects created while working through the Free Code Camp curriculum. Through these projects, I worked with new API's, learned how to import data from sites, & started learning more about styling and testing. I also improved some of the documentation for Free Code Camp's weather API source.",
