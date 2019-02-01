@@ -18,6 +18,7 @@ const results = fetch(dataURL)
       const pImages = project.image;       
       // Next, make a var for the image block as a whole
       const pimgs = document.createElement('div');
+      pimgs.className = 'project-images';
       // Then, if there's only one image, create a single tag and set the src, then add to image block
       if (pImages.length === 1) {
         const pimg = document.createElement('img');

@@ -11,32 +11,40 @@
 /* Overall styles - Starting points */
 html {
     font-size: 16pt;
-    background-color: var(--softGray);
-    height: 100vh;
-    width: 100vw;
+    background-color: var(--darkGray);
+    color: var(--softGray);
+    font: var(--sansSerif);
 }
 
 /* Hero section */
-.hero h2 {
-    text-align: center;
-    color: var(--mainBlue);
-    font: var(--serif);
-    font-size: 40pt;
+.hero {
+    border: 5px solid var(--mainBlue);
+    padding: 3%;
+    margin-bottom: 5%;
 }
 
-.hero h3 {
+.hero h1 {
     text-align: center;
-    color: var(--mainGreen);
-    font: var(--sansSerif);
-    font-size: 26pt;
+    font: 4.25em var(--serif);
 }
 
-.introIcons img{
-    width: 15%;
+.intro-icons {
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.intro-icons img{
+    width: 30%;
     padding: 0 4vw;
     color: var(--darkGray);
 }
 
-.introIcons {
-    text-align: center;
+.project-block {
+    border: 5px solid var(--mainGreen);
+    width: 100vw;
+}
+
+.project-images {
+    width: 90%;
 }
