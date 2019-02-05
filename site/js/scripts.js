@@ -11,7 +11,7 @@ const results = fetch(dataURL)
     const projects = res.projects;
     projects.forEach(project => {
       const pblock = document.createElement('div');
-      pblock.classList.add('project-block');
+      pblock.className = 'project-block';
       
       /* For images: */
       // First, grab the image data from datafile & store it
@@ -40,26 +40,31 @@ const results = fetch(dataURL)
 
       const pname = document.createElement('h4');
       pname.innerHTML = project.name;
+      pname.className = 'project-name';
       pblock.append(pname);
 
       const pdesc = document.createElement('p');
       pdesc.innerHTML = project.description;
+      pdesc.className = 'project-desc';
       pblock.append(pdesc);
 
       const ptech = document.createElement('p');
       ptech.innerHTML = project.tech;
+      ptech.className = 'project-tech';
       pblock.append(ptech);
 
       if (project.siteLink !== "") {
         const psitelink = document.createElement('a');
         psitelink.href = project.siteLink;
         psitelink.innerHTML = 'View Project';
+        psitelink.className = 'project-site';
         pblock.append(psitelink);
       }
 
       const pcodelink = document.createElement('a');
       pcodelink.href = project.codeLink;
       pcodelink.innerHTML = 'View the Code';
+      pcodelink.className = 'project-code';
       pblock.append(pcodelink);
 
       projectDiv.append(pblock);
