@@ -1,8 +1,10 @@
-
+// Load in projects once page is ready
 document.addEventListener('DOMContentLoaded', () => results);
 
+// address for projects/certificates
 const dataURL = `http://localhost:8080/assets/data/datafile.json`;
 
+/* Build Project HTMl & Add to Site */
 const projectDiv = document.querySelector('.project-div');
 
 const results = fetch(dataURL)
@@ -53,19 +55,23 @@ const results = fetch(dataURL)
       ptech.className = 'project-tech';
       pblock.append(ptech);
 
+      const plinks = document.createElement('div');
+      plinks.className = 'project-links';
+
       if (project.siteLink !== "") {
         const psitelink = document.createElement('a');
         psitelink.href = project.siteLink;
         psitelink.innerHTML = 'View Project';
         psitelink.className = 'project-site';
-        pblock.append(psitelink);
+        plinks.append(psitelink);
       }
 
       const pcodelink = document.createElement('a');
       pcodelink.href = project.codeLink;
       pcodelink.innerHTML = 'View the Code';
       pcodelink.className = 'project-code';
-      pblock.append(pcodelink);
+      plinks.append(pcodelink);
+      pblock.append(plinks);
 
       projectDiv.append(pblock);
     })
