@@ -27,8 +27,8 @@ const results = fetch(dataURL)
         const thisImg = document.createElement('img');
         console.log(image);
         thisImg.srcset = `
-        ${image[0]} 320w,
-        ${image[1]} 640w,
+        ${image[0]} 420w,
+        ${image[1]} 800w,
         ${image[2]}`;
         thisImg.src = image[2];
         thisImg.alt = project.altText;
