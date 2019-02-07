@@ -21,8 +21,23 @@ const results = fetch(dataURL)
       // Next, make a var for the image block as a whole
       const pimgs = document.createElement('div');
       pimgs.className = 'project-images';
+      
+      // Then, build the img tag, with srcset and alt text included
+      pImages.forEach(image => {
+        const thisImg = document.createElement('img');
+        console.log(image);
+        thisImg.srcset = `
+        ${image[0]} 320w,
+        ${image[1]} 640w,
+        ${image[2]}`;
+        thisImg.src = image[2];
+        thisImg.alt = project.altText;
+        pimgs.append(thisImg);
+      })
+      
+      
       // Then, if there's only one image, create a single tag and set the src, then add to image block
-      if (pImages.length === 1) {
+      /* if (pImages.length === 1) {
         const pimg = document.createElement('img');
         pimg.src = pImages[0];
         pimg.alt = project.altText;
@@ -34,8 +49,8 @@ const results = fetch(dataURL)
           thisImg.src = image;
           thisImg.alt = project.altText;
           pimgs.append(thisImg);
-        });
-      }
+        }); 
+      } */
       
       // Finally, add the image block to the pblock
       pblock.append(pimgs);
@@ -71,6 +86,11 @@ const results = fetch(dataURL)
       pcodelink.innerHTML = 'View the Code';
       pcodelink.className = 'project-code';
       plinks.append(pcodelink);
+
+      if (project.siteLink == "" || project.codeLink == "") {
+        plinks.classList.add("single-button");
+      }
+
       pblock.append(plinks);
 
       projectDiv.append(pblock);

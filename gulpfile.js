@@ -42,8 +42,8 @@ function optMedImages(cb) {
     src('./site/assets/images/**/*.+(jpg|png)') 
         // mid size files
         .pipe(resizeImg({ 
-            percentage: 75, 
-            quality: 0.75
+            width: 640, 
+            quality: 0.85
         }))
         .pipe(reduceImg()) 
         .pipe(renameImg(function (path) { path.basename += "-med"; })) 
@@ -56,8 +56,8 @@ function optSmallImages(cb) {
     src('./site/assets/images/**/*.+(jpg|png)')
     // small files
     .pipe(resizeImg({ 
-        percentage: 50, 
-        quality: 0.5
+        width: 320,
+        quality: 0.75
     }))
     .pipe(reduceImg()) 
     .pipe(renameImg(function (path) { path.basename += "-small"; }))

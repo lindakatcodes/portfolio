@@ -3,7 +3,11 @@
         {
             "name": "Restaurant Reviews",
             "image": [
-                "assets/images/projects/restaurantReviews.png"
+                [
+                    "assets/images/optimized/projects/restaurantReviews-small.png",
+                    "assets/images/optimized/projects/restaurantReviews-med.png",
+                    "assets/images/projects/restaurantReviews.png"
+                ]
             ],
             "altText": "Photo of Restaurant Reviews Website",
             "description": "An application created during the Grow with Google / Udacity Mobile Web Specialist Nanodegree course. This site allows users to favorite, store, & add reviews for a list of restaurants.",
