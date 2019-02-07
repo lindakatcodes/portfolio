@@ -42,7 +42,7 @@ function optMedImages(cb) {
     src('./site/assets/images/**/*.+(jpg|png)') 
         // mid size files
         .pipe(resizeImg({ 
-            width: 640, 
+            width: 800, 
             quality: 0.85
         }))
         .pipe(reduceImg()) 
@@ -56,7 +56,7 @@ function optSmallImages(cb) {
     src('./site/assets/images/**/*.+(jpg|png)')
     // small files
     .pipe(resizeImg({ 
-        width: 320,
+        width: 420,
         quality: 0.75
     }))
     .pipe(reduceImg()) 
