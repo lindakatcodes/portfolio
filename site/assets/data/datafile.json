@@ -81,7 +81,7 @@
             "class": "Mobile Web Specialist",
             "cert": [
                 "assets/images/optimized/certificates/MWS_Certificate-small.png",
-                "assets/images/optimized/certificates/MWS_Certificiate-med.png",
+                "assets/images/optimized/certificates/MWS_Certificate-med.png",
                 "assets/images/certificates/MWS_Certificate.png"
             ] 
         },
@@ -113,7 +113,7 @@
             "class": "CS50",
             "cert": [
                 "assets/images/optimized/certificates/HarvardX_CS50_Certificate-small.png",
-                "assets/images/optimized/certificates/HarvardX_CS50_Certificite-med.png",
+                "assets/images/optimized/certificates/HarvardX_CS50_Certificate-med.png",
                 "assets/images/certificates/HarvardX_CS50_Certificate.png"
             ]
         }
