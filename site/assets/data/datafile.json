@@ -78,7 +78,7 @@
     ],
     "certificates": [
         {
-            "class": "Mobile Web Specialist",
+            "class": "Mobile Web Specialist - Udacity / Grow with Google",
             "cert": [
                 "assets/images/optimized/certificates/MWS_Certificate-small.png",
                 "assets/images/optimized/certificates/MWS_Certificate-med.png",
@@ -86,7 +86,7 @@
             ] 
         },
         {
-            "class": "Git a Web Developer Job",
+            "class": "Git a Web Developer Job - Udemy",
             "cert": [
                 "assets/images/optimized/certificates/GitWebDev_Certificate-small.png",
                 "assets/images/optimized/certificates/GitWebDev_Certificate-med.png",
@@ -94,7 +94,7 @@
             ]
         },
         {
-            "class": "MongoDB 101JS",
+            "class": "MongoDB 101JS - MongoDB University",
             "cert": [
                 "assets/images/optimized/certificates/M101JS_Certificate-small.png",
                 "assets/images/optimized/certificates/M101JS_Certificate-med.png",
@@ -102,7 +102,7 @@
             ]
         },
         {
-            "class": "Learn Node",
+            "class": "Learn Node - Wes Bos",
             "cert": [
                 "assets/images/optimized/certificates/Learn_Node_Certificate-small.png",
                 "assets/images/optimized/certificates/Learn_Node_Certificate-med.png",
@@ -110,7 +110,7 @@
             ]
         },
         {
-            "class": "CS50",
+            "class": "CS50 - EdX / HarvardX",
             "cert": [
                 "assets/images/optimized/certificates/HarvardX_CS50_Certificate-small.png",
                 "assets/images/optimized/certificates/HarvardX_CS50_Certificate-med.png",

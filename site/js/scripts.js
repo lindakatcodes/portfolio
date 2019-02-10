@@ -6,7 +6,7 @@ const dataURL = `http://localhost:8080/assets/data/datafile.json`;
 
 // Save the project & certificate sections from the HTML
 const projectDiv = document.querySelector('.project-section');
-const certDiv = document.querySelector('.cert-section');
+const certDiv = document.querySelector('.certs');
 
 /* Grab data from the datafile and display on site */
 const results = fetch(dataURL)
@@ -25,11 +25,17 @@ const results = fetch(dataURL)
       
       /* For images: */
       // First, grab the image data from datafile & store it
-      const pImages = project.image;       
+      const pImages = project.image;    
+            
       // Next, make a var for the image block as a whole
       const pimgs = document.createElement('div');
       pimgs.className = 'project-images';
       
+      // if there's more than 1 image, add a special class name for styling purposes
+      if (pImages.length > 1) {
+        pimgs.classList.add('multi-img');
+      }
+
       // Then, build the img tag, with srcset and alt text included
       pImages.forEach(image => {
         const thisImg = document.createElement('img');
@@ -100,6 +106,7 @@ const results = fetch(dataURL)
       
       const cCaption = document.createElement('figcaption');
       cCaption.innerText = cert.class;
+      cCaption.className = 'cert-caption';
 
       cFig.append(cCaption);
 

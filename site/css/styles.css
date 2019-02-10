@@ -1,5 +1,5 @@
 /* Variable declarations */
-:root{
+:root {
     --mainBlue: #006699;
     --mainGreen: #339966;
     --darkGray: #403B41;
@@ -10,191 +10,217 @@
 
 /* Overall styles - Starting points */
 html {
-    font-size: 16pt;
     background-color: var(--softGray);
     color: var(--darkGray);
-    font: var(--sansSerif);
+    font-family: var(--sansSerif);
 }
 
 body {
     min-width: 100vw;
     min-height: 100vh;
-    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--serif);
+  margin: 0;
+}
+
+.section-title {
+  padding: 2% 0 4%;
+  text-align: center;
+  font-size: 3rem;
+}
+
+section {
+  padding: 3% 0;
 }
 
 /* Hero section */
 .hero {
-    padding-top: 30%;
-    height: 100vh;
+  margin-top: 25vh;
+  min-height: 100vh;
 }
 
 .hero h1 {
-    text-align: center;
-    font: 4.25em var(--serif);
+  font-size: 4.5rem;
+  text-align: center;
 }
 
 .break-line {
-    width: 65%;
-    height: 0.75%;
-    border-radius: 15px;
-    background-color: var(--mainGreen);
-    margin: -8% auto 8%;
+  width: 55vw;
+  height: 1vh;
+  background: linear-gradient(to right, var(--mainGreen), var(--mainBlue));
+  border-radius: 5px;
+  margin: 2% auto;
 }
 
 .intro-icons {
-    text-align: center;
-    margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
-.intro-icons img{
-    width: 20%;
-    padding: 0 1%;
-    color: var(--darkGray);
+.intro-icons img {
+  width: 7vw;
+  padding: 0 1.5em;
 }
 
 .more {
-    margin: 8% auto;
-    padding: 3%;
-    width: 60%;
-    height: 7%;
-    border: 1px solid var(--darkGray);
-    border-radius: 35px;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: 600;
-    color: var(--mainBlue);
+  margin: 2% auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more p {
+  font-size: 1.3rem;
+  margin: 1% 0 0;
 }
 
 .more img {
-    width: 80%;
-    height: 60%;
+  width: 4vw;
+  margin-top: -1%;
 }
 
-/* Project Styles */
-.project-div {
-    background-color: var(--darkGray);
+/* Project Style */
+.project-section {
+  color: var(--softGray);
+  background-color: var(--darkGray);
 }
 
 .project-title {
-    font: var(--serif);
-    color: var(--softGray);
-    text-align: center;
-    font-size: 2.2em;
-    padding: 3%;
-    margin-top: 0;
-    text-decoration: underline var(--mainBlue);
+  text-decoration: underline var(--mainGreen);
 }
 
 .project-block {
-    width: 95vw;
-    border: 3px solid var(--mainBlue);
-    margin-bottom: 4%;
-    padding: 0.75%;
-    display: flex;
-    flex-direction: column;
-    color: var(--softGray);
-  }
+  width: 85vw;
+  height: 70vh;
+  margin: 1% auto;
+  padding: 1%;
+  border: 3px solid var(--mainGreen);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 20% 50% 15% 15%;
+  grid-column-gap: 1.5%;
+  align-items: center;
+}
 
-  .project-images {
-      width: 100%;
-    }
+.project-block:nth-child(even) {
+  border: 3px solid var(--mainBlue);
+}
 
-    .project-images img {
-        width: 100%;
-    }
+.project-name {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline var(--mainBlue);
+}
 
-  .project-name {
-      text-align: center;
-      font-size: 8vw;
-      margin: 0.5em 0 1em 0;
-      text-decoration: underline var(--mainGreen);
-  }
+.project-block:nth-child(even) .project-name {
+  text-decoration: underline var(--mainGreen);
+}
+
+.project-images {
+  grid-column: 1;
+  grid-row: 1 / 5;
+  align-self: stretch;
+  justify-self: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-images img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.multi-img img {
+  max-width: 50%;
+  max-height: 50%;
+}
+
+.project-desc {
+  grid-column: 2;
+  grid-row: 2;
+  font-size: 1.25rem;
+  padding: 0 2%;
+}
+
+.project-tech {
+  grid-column: 2;
+  grid-row: 3;
+  color: var(--mainGreen);
+  text-align: center;
+}
+
+.project-block:nth-child(even) .project-tech {
+  color: var(--mainBlue);
+}
+
+.project-links {
+  grid-column: 2;
+  grid-row: 4;
+  text-align: center;
+}
+
+.project-links a {
+  color: var(--softGray);
+  padding: 2%;
+  font-size: 1.2rem;
+  margin: 0 3%;
+  text-decoration: underline var(--mainGreen);
+  border: 1px solid var(--mainBlue);
+}
+
+.project-block:nth-child(even) .project-links a {
+  text-decoration: underline var(--mainBlue);
+  border: 1px solid var(--mainGreen);
+}
+
+/* Certificate Styles */
+.certs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.cert-title {
+  text-decoration: underline var(--mainBlue);
+}
+
+.cert-block {
+  width: 40vw;
+  border: 1.5px solid var(--darkGray);
+  background-color: var(--darkGray);
+}
+
+.cert-block img {
+  width: 100%;
+  height: 100%;
+}
+
+.cert-caption {
+  color: var(--softGray);
+  text-align: center;
+  padding: 2%;
+}
+
+/* About / Contact Styles */
+.about-section {
+  background-color: var(--darkGray);
+  color: var(--softGray);
+}
+
+.about-title {
+  text-decoration: underline var(--mainGreen);
+}
+
+.about-photo {
+
+}
+
+.about-text {
   
-  .project-desc {
-      padding: 0 7%;
-      margin: 1em 0 0.5em 0;
-      font-size: 5.5vw;
-      text-align: justify;
-  }
-  
-  .project-tech {
-      text-align: center;
-      color: var(--mainGreen);
-      padding: 0 5%;
-      margin: 0.75em 0;
-      font-size: 1.2em;
-  }
-  
-  .project-links {
-    display: flex;
-    justify-content: space-between;
-    padding: 4% 7%;
-  }
-
-  .project-links a {
-    color: var(--softGray);
-    font-size: 5.5vw;
-    border: 1px solid var(--softGray);
-    padding: 4%;
-  }
-
-  .single-button {
-      justify-content: center;
-  }
-  
-  @media screen and (min-width: 850px) {
-    .project-block {
-        width: 97vw;
-        border: 3px solid var(--mainGreen);
-        margin: 1% 0;
-        display: grid;
-        grid-template-rows: 20% 30% 20% 30%;
-        grid-template-columns: 40% 30% 30%;
-      }
-      
-      .project-images {
-        grid-column: 1/2;
-        grid-row: 1 / span 4;
-      }
-      
-      .project-images img {
-        width: 100%;
-        height: 100%;
-      }
-      
-      .project-name {
-        grid-column: 2 / 4;
-        grid-row: 1;
-        justify-self: center;
-        font-size: 1.5em;
-      }
-      
-      .project-desc {
-        grid-column: 2 / 4;
-        grid-row: 2;
-        padding: 0 5%;
-      }
-      
-      .project-tech {
-        grid-column: 2 / 4;
-        grid-row: 3;
-        justify-self: center;
-        color: lightblue;
-      }
-      
-      .project-block a {
-        grid-row: 4;
-        padding: 4%;
-        color: var(--softGray);
-      }
-      
-      .project-site {
-        grid-column: 2;
-        justify-self: center;
-      }
-      
-      .project-code {
-        grid-column: 3;
-        justify-self: center;
-      }
-  }
+}
