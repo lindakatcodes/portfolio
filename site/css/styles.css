@@ -278,6 +278,7 @@ section {
   grid-row: 3;
   grid-column: 1 / span 2;
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
   align-content: stretch;
