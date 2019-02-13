@@ -1,0 +1,121 @@
+{
+    "projects": [
+        {
+            "name": "Restaurant Reviews",
+            "image": [
+                [
+                    "assets/images/optimized/projects/restaurantReviews-small.png",
+                    "assets/images/optimized/projects/restaurantReviews-med.png",
+                    "assets/images/projects/restaurantReviews.png"
+                ]
+            ],
+            "altText": "Photo of Restaurant Reviews Website",
+            "description": "An application created during the Grow with Google / Udacity Mobile Web Specialist Nanodegree course. This site allows users to favorite, store, & add reviews for a list of restaurants.",
+            "tech": "HTML, CSS, JS, Service Workers, IndexedDB / idb",
+            "siteLink": "https://mws-reviews-app-lt.netlify.com/",
+            "codeLink": "https://github.com/lindakatcodes/mws-restaurant-project"
+        },
+        {
+            "name": "Stamp Inventory",
+            "image": [
+                [
+                    "assets/images/optimized/projects/stampTracker-small.png",
+                    "assets/images/optimized/projects/stampTracker-med.png",
+                    "assets/images/projects/stampTracker.png"
+                ]
+            ],
+            "altText": "Photo of Stamp Inventory Tracking Website",
+            "description": "A simple site created to show the current inventory for self-inking stamp supplies, with a form to update when supplies are used or received.",
+            "tech": "HTML, CSS, JS, Google Sheets API",
+            "siteLink": "https://drive.google.com/open?id=1f8X0eCXDhnrG89FgEAn5r-kL5IbXwxfm",
+            "codeLink": "https://github.com/lindakatcodes/StampInventory"
+        },
+        {
+            "name": "Daily CSS Images",
+            "image":[
+                [
+                    "assets/images/optimized/projects/cssHobbes-small.png",
+                    "assets/images/optimized/projects/cssHobbes-med.png",
+                    "assets/images/projects/cssHobbes.png"
+                ],
+                [
+                    "assets/images/optimized/projects/cssElephant-small.png",
+                    "assets/images/optimized/projects/cssElephant-med.png",
+                    "assets/images/projects/cssElephant.png"
+                ]
+            ],
+            "altText": "Photos of a tiger and elephant drawn with CSS",
+            "description": "Images created using CSS, following prompts from a daily email. Intended to help improve my CSS understanding & skills.",
+            "tech": "HTML, CSS",
+            "siteLink": "",
+            "codeLink": "https://codepen.io/collection/nmzkYx/"
+        },
+        {
+            "name": "Free Code Camp Projects",
+            "image": [
+                [
+                    "assets/images/optimized/projects/randomQuote-small.png",
+                    "assets/images/optimized/projects/randomQuote-med.png",
+                    "assets/images/projects/randomQuote.png"
+                ],
+                [
+                    "assets/images/optimized/projects/weather-small.png",
+                    "assets/images/optimized/projects/weather-med.png",
+                    "assets/images/projects/weather.png"
+                ],
+                [
+                    "assets/images/optimized/projects/wikiViewer-small.jpg",
+                    "assets/images/optimized/projects/wikiViewer-med.jpg",
+                    "assets/images/projects/wikiViewer.jpg"
+                ]
+            ],
+            "altText": "Photos of projects completed using the Free Code Camp Website",
+            "description": "Projects created while working through the Free Code Camp curriculum. Through these projects, I worked with new API's, learned how to import data from sites, & started learning more about styling and testing. I also improved some of the documentation for Free Code Camp's weather API source.",
+            "tech": "HTML, CSS, JS",
+            "siteLink": "",
+            "codeLink": "https://codepen.io/collection/nRGemQ/"
+        }
+    ],
+    "certificates": [
+        {
+            "class": "Mobile Web Specialist - Udacity / Grow with Google",
+            "cert": [
+                "assets/images/optimized/certificates/MWS_Certificate-small.png",
+                "assets/images/optimized/certificates/MWS_Certificate-med.png",
+                "assets/images/certificates/MWS_Certificate.png"
+            ] 
+        },
+        {
+            "class": "Git a Web Developer Job - Udemy",
+            "cert": [
+                "assets/images/optimized/certificates/GitWebDev_Certificate-small.png",
+                "assets/images/optimized/certificates/GitWebDev_Certificate-med.png",
+                "assets/images/certificates/GitWebDev_Certificate.png"
+            ]
+        },
+        {
+            "class": "MongoDB 101JS - MongoDB University",
+            "cert": [
+                "assets/images/optimized/certificates/M101JS_Certificate-small.png",
+                "assets/images/optimized/certificates/M101JS_Certificate-med.png",
+                "assets/images/certificates/M101JS_Certificate.png"
+            ]
+        },
+        {
+            "class": "Learn Node - Wes Bos",
+            "cert": [
+                "assets/images/optimized/certificates/Learn_Node_Certificate-small.png",
+                "assets/images/optimized/certificates/Learn_Node_Certificate-med.png",
+                "assets/images/certificates/Learn_Node_Certificate.png"
+            ]
+        },
+        {
+            "class": "CS50 - EdX / HarvardX",
+            "cert": [
+                "assets/images/optimized/certificates/HarvardX_CS50_Certificate-small.png",
+                "assets/images/optimized/certificates/HarvardX_CS50_Certificate-med.png",
+                "assets/images/certificates/HarvardX_CS50_Certificate.png"
+            ]
+        }
+    ]
+}

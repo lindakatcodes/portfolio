@@ -72,6 +72,12 @@ function copyIcons() {
     .pipe(dest('./docs/assets/icons'));
 }
 
+//copy datafile to docs folder
+function copyData() {
+    return src('./site/assets/data/datafile.json')
+    .pipe(dest('./docs/assets/data'));
+}
+
 // clean functions - remove current folders, to avoid contamination of data
 function cleanDistFiles() {
     return del('./docs/*.html', './docs/css', './docs/js')
@@ -102,6 +108,6 @@ exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages))
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS));
 
 exports.makesite = series(parallel(cleanDistFiles, cleanImages), 
-    parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages, copyIcons));
+    parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages, copyIcons, copyData));
 
 exports.watch = watcher;
