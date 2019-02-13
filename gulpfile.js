@@ -32,9 +32,9 @@ function prepJS() {
 
 // grab HTML files, minify, then send to docs
 function prepHTML() {
-    return src('./site/index.html', { sourcemaps: true })
+    return src('./site/index.html')
     .pipe(htmlmin())
-    .pipe(dest('./docs', { sourcemaps: '.' }));
+    .pipe(dest('./docs'));
 }
 
 //copy datafile to docs folder
