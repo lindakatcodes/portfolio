@@ -88,11 +88,11 @@ function copyIcons() {
 
 // clean functions - remove current folders, to avoid contamination of data
 function cleanDistFiles() {
-    return del('./docs/*.html', './docs/css', './docs/js', './docs/assets/data')
+    return del('./docs/*.html', './docs/*.map', './docs/css/**/*', './docs/js/**/*', './docs/assets/data/**/*')
 }
 
 function cleanImages() {
-    return del('./site/assets/images/optimized', './docs/assets/images')
+    return del('./site/assets/images/optimized/**/*', './docs/assets/images/**/*')
 }
 
 // browser-sync & watch function for live testing
@@ -115,6 +115,8 @@ function watcher() {
 exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages, copyPhotos));
 
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS, prepData));
+
+exports.cleanDocs = parallel(cleanImages, cleanDistFiles);
 
 exports.makesite = series(parallel(cleanDistFiles, cleanImages), 
     parallel(prepHTML, prepCSS, prepJS, prepData, optMedImages, optSmallImages, copyIcons, copyPhotos));
