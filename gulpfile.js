@@ -37,6 +37,13 @@ function prepHTML() {
     .pipe(dest('./docs', { sourcemaps: '.' }));
 }
 
+//copy datafile to docs folder
+function prepData() {
+    return (src('./site/assets/data/datafile.json'))
+    .pipe(dest('./docs/assets/data'));
+}
+
+
 // optimize images (med & small sizes) & mark filename for size
 function optMedImages(cb) {
     src('./site/assets/images/**/*.+(jpg|png)') 
@@ -66,21 +73,22 @@ function optSmallImages(cb) {
     cb();
 }
 
+// make sure to copy the original version of the images to the docs folder
+function copyPhotos(cb) {
+    src('./site/assets/images/**/*')
+    .pipe(dest('./docs/assets/images'));
+    cb();
+}
+
 // copy icon images over to docs folder
 function copyIcons() {
     return src('./site/assets/icons/*.svg')
     .pipe(dest('./docs/assets/icons'));
 }
 
-//copy datafile to docs folder
-function copyData() {
-    return src('./site/assets/data/datafile.json')
-    .pipe(dest('./docs/assets/data'));
-}
-
 // clean functions - remove current folders, to avoid contamination of data
 function cleanDistFiles() {
-    return del('./docs/*.html', './docs/css', './docs/js')
+    return del('./docs/*.html', './docs/css', './docs/js', './docs/assets/data')
 }
 
 function cleanImages() {
@@ -100,14 +108,15 @@ function watcher() {
     watch('./site/*.html', { delay: 100 }, series(prepHTML, reload));
     watch('./site/css/*.css', { delay: 100 }, series(prepCSS, reload));
     watch('./site/js/*js', { delay: 100 }, series(prepJS, reload));
+    watch('./site/assets/data/datafile.json', { delay: 100 }, series(prepData, reload));
 }
 
 // exports / task names
-exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages));
+exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages, copyPhotos));
 
-exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS));
+exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS, prepData));
 
 exports.makesite = series(parallel(cleanDistFiles, cleanImages), 
-    parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages, copyIcons, copyData));
+    parallel(prepHTML, prepCSS, prepJS, prepData, optMedImages, optSmallImages, copyIcons, copyPhotos));
 
 exports.watch = watcher;
