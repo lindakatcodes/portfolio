@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => results);
 
 // address for projects/certificates
 const dataURL = `http://localhost:8080/assets/data/datafile.json`;
-const onlineURL = `http://version6.lindakat.com/assets/data/datafile.json`;
+const onlineURL = `https://version6.lindakat.com/assets/data/datafile.json`;
 
 // Save the project & certificate sections from the HTML
 const projectDiv = document.querySelector('.project-section');
