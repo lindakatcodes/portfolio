@@ -59,6 +59,7 @@ section {
 .intro-icons {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .intro-icons img {
@@ -67,15 +68,19 @@ section {
 }
 
 .intro-icons a {
-  transition: background 0.8s;
+  transition: background-color 0.8s;
 }
 
 .intro-icons a:hover {
-  background: linear-gradient(45deg, var(--mainGreen), var(--mainBlue))
+  background-color: var(--mainGreen);
 }
 
-.intro-icons a:hover:nth-child(even) {
-  background: linear-gradient(225deg, var(--mainGreen), var(--mainBlue))
+.intro-icons a:hover:nth-child(2) {
+  background-color: #197f80;
+}
+
+.intro-icons a:hover:nth-child(3) {
+  background-color: var(--mainBlue);
 }
 
 .more {
@@ -217,6 +222,7 @@ section {
   width: 40vw;
   border: 1.5px solid var(--darkGray);
   background-color: var(--darkGray);
+  box-shadow: 7px 12px 20px -2px var(--darkGray);
 }
 
 .cert-block img {
