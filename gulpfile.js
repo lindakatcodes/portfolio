@@ -20,21 +20,21 @@ function prepCSS() {
     return src('./site/css/styles.css', { sourcemaps: true })
     .pipe(prefixer())
     .pipe(csso())
-    .pipe(dest('./dist/css', { sourcemaps: '.' }));
+    .pipe(dest('./docs/css', { sourcemaps: '.' }));
 }
 
-// take working JS files, compress, then send to dist
+// take working JS files, compress, then send to docs
 function prepJS() {
     return src('./site/js/scripts.js', { sourcemaps: true })
     .pipe(uglify())
-    .pipe(dest('./dist/js', { sourcemaps: '.' }));
+    .pipe(dest('./docs/js', { sourcemaps: '.' }));
 }
 
-// grab HTML files, minify, then send to dist
+// grab HTML files, minify, then send to docs
 function prepHTML() {
     return src('./site/index-new.html', { sourcemaps: true })
     .pipe(htmlmin())
-    .pipe(dest('./dist', { sourcemaps: '.' }));
+    .pipe(dest('./docs', { sourcemaps: '.' }));
 }
 
 // optimize images (med & small sizes) & mark filename for size
@@ -48,7 +48,7 @@ function optMedImages(cb) {
         .pipe(reduceImg()) 
         .pipe(renameImg(function (path) { path.basename += "-med"; })) 
         .pipe(dest('./site/assets/images/optimized'))
-        .pipe(dest('./dist/assets/images'))
+        .pipe(dest('./docs/assets/images'))
         cb();
 }
 
@@ -62,30 +62,30 @@ function optSmallImages(cb) {
     .pipe(reduceImg()) 
     .pipe(renameImg(function (path) { path.basename += "-small"; }))
     .pipe(dest('./site/assets/images/optimized'))
-    .pipe(dest('./dist/assets/images'))
+    .pipe(dest('./docs/assets/images'))
     cb();
 }
 
-// copy icon images over to dist folder
+// copy icon images over to docs folder
 function copyIcons() {
     return src('./site/assets/icons/*.svg')
-    .pipe(dest('./dist/assets/icons'));
+    .pipe(dest('./docs/assets/icons'));
 }
 
 // clean functions - remove current folders, to avoid contamination of data
 function cleanDistFiles() {
-    return del('./dist/*.html', './dist/css', './dist/js')
+    return del('./docs/*.html', './docs/css', './docs/js')
 }
 
 function cleanImages() {
-    return del('./site/assets/images/optimized', './dist/assets/images')
+    return del('./site/assets/images/optimized', './docs/assets/images')
 }
 
 // browser-sync & watch function for live testing
 function watcher() {
     browserSync.init({
         server: {
-            baseDir: './site',
+            baseDir: './docs',
             index: 'index-new.html'
         },
         port: 8080
@@ -101,7 +101,7 @@ exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages))
 
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS));
 
-exports.fullBuild = series(parallel(cleanDistFiles, cleanImages), 
+exports.makesite = series(parallel(cleanDistFiles, cleanImages), 
     parallel(prepHTML, prepCSS, prepJS, optMedImages, optSmallImages, copyIcons));
 
 exports.watch = watcher;
