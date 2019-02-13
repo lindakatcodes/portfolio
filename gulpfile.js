@@ -32,7 +32,7 @@ function prepJS() {
 
 // grab HTML files, minify, then send to docs
 function prepHTML() {
-    return src('./site/index-new.html', { sourcemaps: true })
+    return src('./site/index.html', { sourcemaps: true })
     .pipe(htmlmin())
     .pipe(dest('./docs', { sourcemaps: '.' }));
 }
@@ -100,7 +100,7 @@ function watcher() {
     browserSync.init({
         server: {
             baseDir: './docs',
-            index: 'index-new.html'
+            index: 'index.html'
         },
         port: 8080
     });
