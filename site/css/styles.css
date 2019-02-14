@@ -161,8 +161,8 @@ section {
 }
 
 .multi-img img {
-  max-width: 50%;
-  max-height: 50%;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 .project-desc {
@@ -263,6 +263,7 @@ section {
   grid-column: 1; 
   margin-left: 4%;
   border-radius: 25px;
+  max-width: 35vw;
 }
 
 .about-text {
