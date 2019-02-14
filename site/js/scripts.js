@@ -10,7 +10,7 @@ const projectDiv = document.querySelector('.project-section');
 const certDiv = document.querySelector('.certs');
 
 /* Grab data from the datafile and display on site */
-const results = fetch(onlineURL)
+const results = fetch(dataURL)
   .then(res => res.json())
   .then(res => {
     // First - projects
