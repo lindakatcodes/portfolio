@@ -54,11 +54,6 @@
             "name": "Free Code Camp Projects",
             "image": [
                 [
-                    "assets/images/projects/randomQuote-small.png",
-                    "assets/images/projects/randomQuote-med.png",
-                    "assets/images/projects/randomQuote.png"
-                ],
-                [
                     "assets/images/projects/weather-small.png",
                     "assets/images/projects/weather-med.png",
                     "assets/images/projects/weather.png"
@@ -67,6 +62,11 @@
                     "assets/images/projects/wikiViewer-small.jpg",
                     "assets/images/projects/wikiViewer-med.jpg",
                     "assets/images/projects/wikiViewer.jpg"
+                ],
+                [
+                    "assets/images/projects/randomQuote-small.png",
+                    "assets/images/projects/randomQuote-med.png",
+                    "assets/images/projects/randomQuote.png"
                 ]
             ],
             "altText": "Photos of projects completed using the Free Code Camp Website",
