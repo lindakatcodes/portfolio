@@ -1,7 +1,9 @@
 /* Variable declarations */
 :root {
     --mainBlue: #006699;
+    --textBlue: #14B1FF;
     --mainGreen: #339966;
+    --textGreen: #3CBE76;
     --darkGray: #403B41;
     --softGray: #DEDEDE;
     --serif: 'David Libre', serif;
@@ -115,14 +117,14 @@ section {
 }
 
 .project-block {
-  width: 85vw;
-  height: 57vh;
+  width: 90vw;
+  height: 135vh;
   margin: 1% auto;
   padding: 1%;
   border: 3px solid var(--mainGreen);
   display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: 20% 50% 15% 15%;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr 1fr 1fr;
   grid-column-gap: 1.5%;
   align-items: center;
 }
@@ -145,13 +147,13 @@ section {
 
 .project-images {
   grid-column: 1;
-  grid-row: 1 / 5;
+  grid-row: 1 / span 4;
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: space-around;
+  align-items: center;
 }
 
 .project-images img {
@@ -161,26 +163,26 @@ section {
 }
 
 .multi-img img {
-  max-width: 50%;
   max-height: 50%;
+  padding: 0.5% 0;
 }
 
 .project-desc {
   grid-column: 2;
   grid-row: 2;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   padding: 0 2%;
 }
 
 .project-tech {
   grid-column: 2;
   grid-row: 3;
-  color: var(--mainGreen);
+  color: var(--textGreen);
   text-align: center;
 }
 
 .project-block:nth-child(even) .project-tech {
-  color: var(--mainBlue);
+  color: var(--textBlue);
 }
 
 .project-links {
@@ -371,11 +373,6 @@ section {
     width: 9.5vw;
   }
 
-  .project-block {
-    width: 90vw;
-    height: 60vh;
-  }
-
   .contact-info img {
     width: 5.5vw;
   }
@@ -403,8 +400,6 @@ section {
   }
 
   .project-block {
-    width: 90vw;
-    height: 135vh;
     grid-template-columns: 1fr;
     grid-template-rows: 7% 50% 25% 7% 11%;
     grid-column-gap: 0;
@@ -412,6 +407,7 @@ section {
 
   .project-images {
     grid-row: 2;
+    flex-direction: row;
   }
 
   .project-name {
