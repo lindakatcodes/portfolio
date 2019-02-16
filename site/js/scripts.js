@@ -71,6 +71,8 @@ const results = fetch(onlineURL)
         psitelink.href = project.siteLink;
         psitelink.innerHTML = 'View Project';
         psitelink.className = 'project-site';
+        psitelink.target = '_blank';
+        psitelink.rel = 'noreferrer';
         plinks.append(psitelink);
       }
 
@@ -78,6 +80,8 @@ const results = fetch(onlineURL)
       pcodelink.href = project.codeLink;
       pcodelink.innerHTML = 'View the Code';
       pcodelink.className = 'project-code';
+      pcodelink.target = '_blank';
+      pcodelink.rel = 'noreferrer';
       plinks.append(pcodelink);
 
       if (project.siteLink == "" || project.codeLink == "") {
