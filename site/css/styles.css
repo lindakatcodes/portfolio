@@ -261,7 +261,7 @@ section {
 }
 
 .about-photo {
-  grid-row: 2;
+  grid-row: 2 / 3;
   grid-column: 1; 
   margin-left: 4%;
   border-radius: 25px;
@@ -272,12 +272,42 @@ section {
   grid-row: 2;
   grid-column: 2;
   width: 95%;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 
 .about-text p {
   margin: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 3%;
+  padding-left: 2%;
+}
+
+.about-headers {
+  padding-bottom: 1%;
+  font-size: 1.4rem;
+  text-decoration: underline var(--mainBlue);
+}
+
+.green {
+  text-decoration: underline var(--mainGreen);
+}
+
+.learning-list {
+  margin-top: 0;
+  list-style-image: url('../assets/icons/level-up-alt.svg');
+}
+
+.learning-list li {
+  margin-bottom: 1.5%;
+}
+
+.learning-list a {
+  color: var(--textGreen);
+  text-decoration: underline var(--mainBlue);
+}
+
+.end-line {
+  padding-top: 3%;
+  padding-left: 0;
 }
 
 /* Contact Styles */
