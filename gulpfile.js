@@ -53,8 +53,7 @@ function optMedImages(cb) {
             quality: 0.85
         }))
         .pipe(reduceImg()) 
-        .pipe(renameImg(function (path) { path.basename += "-med"; })) 
-        .pipe(dest('./site/assets/images/optimized'))
+        .pipe(renameImg(function (path) { path.basename += "-med"; }))
         .pipe(dest('./docs/assets/images'))
         cb();
 }
@@ -68,7 +67,6 @@ function optSmallImages(cb) {
     }))
     .pipe(reduceImg()) 
     .pipe(renameImg(function (path) { path.basename += "-small"; }))
-    .pipe(dest('./site/assets/images/optimized'))
     .pipe(dest('./docs/assets/images'))
     cb();
 }
@@ -92,7 +90,7 @@ function cleanDistFiles() {
 }
 
 function cleanImages() {
-    return del('./site/assets/images/optimized/**/*', './docs/assets/images/**/*')
+    return del('./docs/assets/images/**/*')
 }
 
 // browser-sync & watch function for live testing
