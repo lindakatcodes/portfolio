@@ -78,7 +78,8 @@
                 "assets/images/certificates/MWS_Certificate-small.png",
                 "assets/images/certificates/MWS_Certificate-med.png",
                 "assets/images/certificates/MWS_Certificate.png"
-            ] 
+            ], 
+            "certLink": "https://confirm.udacity.com/QKVT6DQY"
         },
         {
             "class": "Git a Web Developer Job - Udemy",
@@ -86,15 +87,8 @@
                 "assets/images/certificates/GitWebDev_Certificate-small.png",
                 "assets/images/certificates/GitWebDev_Certificate-med.png",
                 "assets/images/certificates/GitWebDev_Certificate.png"
-            ]
-        },
-        {
-            "class": "MongoDB 101JS - MongoDB University",
-            "cert": [
-                "assets/images/certificates/M101JS_Certificate-small.png",
-                "assets/images/certificates/M101JS_Certificate-med.png",
-                "assets/images/certificates/M101JS_Certificate.png"
-            ]
+            ], 
+            "certLink": "https://www.udemy.com/certificate/UC-QP5JLWR6/"
         },
         {
             "class": "Learn Node - Wes Bos",
@@ -102,7 +96,8 @@
                 "assets/images/certificates/Learn_Node_Certificate-small.png",
                 "assets/images/certificates/Learn_Node_Certificate-med.png",
                 "assets/images/certificates/Learn_Node_Certificate.png"
-            ]
+            ], 
+            "certLink": "https://learnnode.com/"
         },
         {
             "class": "CS50 - EdX / HarvardX",
@@ -110,7 +105,8 @@
                 "assets/images/certificates/HarvardX_CS50_Certificate-small.png",
                 "assets/images/certificates/HarvardX_CS50_Certificate-med.png",
                 "assets/images/certificates/HarvardX_CS50_Certificate.png"
-            ]
+            ], 
+            "certLink": "https://courses.edx.org/certificates/e5de27ef4cca4ab9b953ea7af8932ee9"
         }
     ]
 }

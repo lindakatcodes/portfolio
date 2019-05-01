@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => results);
 
 // address for projects/certificates
 const dataURL = `https://www.lindakat.com/assets/data/datafile.json`;
+// url for local testing/development
+// const dataURL = `http://localhost:8080/assets/data/datafile.json`;
 
 // Save the project & certificate sections from the HTML
 const projectDiv = document.querySelector('.project-section');
@@ -98,15 +100,22 @@ const results = fetch(dataURL)
       const cFig = document.createElement('figure');
       cFig.className = 'cert-block';
 
+      const cLink = document.createElement('a');
+      cLink.href = cert.certLink;
+      cLink.target = '_blank';
+      cLink.rel = 'noreferrer';
+
       const cImg = document.createElement('img');
       cImg.srcset = `
       ${cert.cert[0]} 420w,
       ${cert.cert[1]} 800w,
       ${cert.cert[2]}`;
       cImg.src = cert.cert[2];
-      cImg.alt = `Certificate earned for completion of ${cert.class} course`;
+      cImg.alt = `${cert.class} course completion certificate`;
       cImg.sizes = `(max-width: 420px) 90vw, (max-width: 800px) 50vw, 40vw`;
-      cFig.append(cImg);
+
+      cLink.appendChild(cImg);
+      cFig.append(cLink);
       
       const cCaption = document.createElement('figcaption');
       cCaption.innerText = cert.class;
