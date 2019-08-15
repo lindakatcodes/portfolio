@@ -9,6 +9,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "del": "^3.0.0",
+    "glob": "^7.1.4",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-csso": "^3.0.1",
@@ -16,7 +17,8 @@
     "gulp-image-resize": "^0.13.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
-    "gulp-uglify-es": "^1.0.4"
+    "gulp-uglify-es": "^1.0.4",
+    "sharp": "^0.23.0"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",

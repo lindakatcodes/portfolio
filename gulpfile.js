@@ -5,7 +5,7 @@ const prefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify-es').default;
 const htmlmin = require('gulp-htmlmin');
-const resizeImg = require('gulp-image-resize');
+const img = require('./gulp_tasks/images');
 const reduceImg = require('gulp-imagemin');
 const renameImg = require('gulp-rename');
 
@@ -43,37 +43,10 @@ function prepData() {
     .pipe(dest('./docs/assets/data'));
 }
 
-
-// optimize images (med & small sizes) & mark filename for size
-function optMedImages(cb) {
-    src('./site/assets/images/**/*.+(jpg|png)') 
-        // mid size files
-        .pipe(resizeImg({ 
-            width: 800, 
-            quality: 0.85
-        }))
-        .pipe(reduceImg()) 
-        .pipe(renameImg(function (path) { path.basename += "-med"; }))
-        .pipe(dest('./docs/assets/images'))
-        cb();
-}
-
-function optSmallImages(cb) {
-    src('./site/assets/images/**/*.+(jpg|png)')
-    // small files
-    .pipe(resizeImg({ 
-        width: 420,
-        quality: 0.75
-    }))
-    .pipe(reduceImg()) 
-    .pipe(renameImg(function (path) { path.basename += "-small"; }))
-    .pipe(dest('./docs/assets/images'))
-    cb();
-}
-
 // make sure to copy the original version of the images to the docs folder
 function copyPhotos(cb) {
     src('./site/assets/images/**/*')
+    .pipe(reduceImg())
     .pipe(dest('./docs/assets/images'));
     cb();
 }
@@ -110,13 +83,13 @@ function watcher() {
 }
 
 // exports / task names
-exports.prepImages = series(cleanImages, parallel(optMedImages, optSmallImages, copyPhotos));
+exports.prepImages = series(cleanImages, parallel(img.resize, copyPhotos));
 
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS, prepData));
 
 exports.cleanDocs = parallel(cleanImages, cleanDistFiles);
 
 exports.makesite = series(parallel(cleanDistFiles, cleanImages), 
-    parallel(prepHTML, prepCSS, prepJS, prepData, optMedImages, optSmallImages, copyIcons, copyPhotos));
+    parallel(prepHTML, prepCSS, prepJS, prepData, img.resize, copyIcons, copyPhotos));
 
 exports.watch = watcher;
