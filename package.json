@@ -17,8 +17,8 @@
     "gulp-image-resize": "^0.13.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-rename": "^1.4.0",
-    "gulp-uglify-es": "^1.0.4",
-    "sharp": "^0.23.0"
+    "gulp-responsive": "^2.14.0",
+    "gulp-uglify-es": "^1.0.4"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",

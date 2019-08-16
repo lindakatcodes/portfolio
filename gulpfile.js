@@ -5,7 +5,7 @@ const prefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify-es').default;
 const htmlmin = require('gulp-htmlmin');
-const img = require('./gulp_tasks/images');
+const responsive = require('gulp-responsive');
 const reduceImg = require('gulp-imagemin');
 const renameImg = require('gulp-rename');
 
@@ -41,6 +41,33 @@ function prepHTML() {
 function prepData() {
     return (src('./site/assets/data/datafile.json'))
     .pipe(dest('./docs/assets/data'));
+}
+
+function resizeImages(cb) {
+    src('./site/assets/images/**/*.{jpg,png}')
+    .pipe(responsive({
+        '**/*': [{
+            width: 800,
+            rename: {
+                suffix: '-med',
+                extname: '.jpg'
+            },
+            withoutEnlargement: false
+        },{
+            width: 420,
+            rename: {
+                suffix: '-small',
+                extname: '.jpg'
+            },
+            withoutEnlargement: false
+        }]
+    }, {
+            errorOnEnlargement: false
+        }
+    ))
+    .pipe(reduceImg())
+    .pipe(dest('./docs/assets/images'))
+    cb();
 }
 
 // make sure to copy the original version of the images to the docs folder
@@ -83,13 +110,13 @@ function watcher() {
 }
 
 // exports / task names
-exports.prepImages = series(cleanImages, parallel(img.resize, copyPhotos));
+exports.prepImages = series(cleanImages, parallel(resizeImages, copyPhotos));
 
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS, prepData));
 
 exports.cleanDocs = parallel(cleanImages, cleanDistFiles);
 
 exports.makesite = series(parallel(cleanDistFiles, cleanImages), 
-    parallel(prepHTML, prepCSS, prepJS, prepData, img.resize, copyIcons, copyPhotos));
+    parallel(prepHTML, prepCSS, prepJS, prepData, copyIcons, resizeImages, copyPhotos));
 
 exports.watch = watcher;
