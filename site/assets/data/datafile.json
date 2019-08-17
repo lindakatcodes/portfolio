@@ -1,112 +1,120 @@
 {
-    "projects": [
-        {
-            "name": "Restaurant Reviews",
-            "image": [
-                [
-                    "assets/images/projects/restaurantReviews-small.png",
-                    "assets/images/projects/restaurantReviews-med.png",
-                    "assets/images/projects/restaurantReviews.png"
-                ]
-            ],
-            "altText": "Photo of Restaurant Reviews Website, showing a bar with restaurant filters above information cards for three restaurants",
-            "description": "An application created during the Grow with Google / Udacity Mobile Web Specialist Nanodegree course. This site allows users to favorite a restaurant & add reviews, as well as filter by food type or location. During the course, each project built on top of the previous one, improving the site each time to ensure it was responsive to different screen sizes and caches the necessary information to work offline once a user has visited a page.",
-            "tech": "HTML, CSS, JS, Service Workers, IndexedDB / idb",
-            "siteLink": "https://mws-reviews-app-lt.netlify.com/",
-            "codeLink": "https://github.com/lindakatcodes/mws-restaurant-project"
-        },
-        {
-            "name": "Stamp Inventory",
-            "image": [
-                [
-                    "assets/images/projects/stampTracker-small.png",
-                    "assets/images/projects/stampTracker-med.png",
-                    "assets/images/projects/stampTracker.png"
-                ]
-            ],
-            "altText": "Photo showing a database of stamp part names and their current quantities",
-            "description": "A site created to show the current inventory for self-inking stamp supplies. Using a Google Spreadsheet as the database, the user can use a form to update when supplies are used or received. If an item falls below the quantity threshold, the background of that box will turn red.",
-            "tech": "HTML, CSS, JS, Google Sheets API",
-            "siteLink": "https://drive.google.com/open?id=1f8X0eCXDhnrG89FgEAn5r-kL5IbXwxfm",
-            "codeLink": "https://github.com/lindakatcodes/StampInventory"
-        },
-        {
-            "name": "Daily CSS Images",
-            "image":[
-                [
-                    "assets/images/projects/cssHobbes-small.png",
-                    "assets/images/projects/cssHobbes-med.png",
-                    "assets/images/projects/cssHobbes.png"
-                ],
-                [
-                    "assets/images/projects/cssElephant-small.png",
-                    "assets/images/projects/cssElephant-med.png",
-                    "assets/images/projects/cssElephant.png"
-                ]
-            ],
-            "altText": "Photos of a tiger and elephant drawn with CSS",
-            "description": "Images created using CSS, following prompts from a daily email. Through working on these drawings, I started to learn more about positioning items with CSS, as well as flexing the creative side of my mind.",
-            "tech": "HTML, CSS",
-            "siteLink": "",
-            "codeLink": "https://codepen.io/collection/nmzkYx/"
-        },
-        {
-            "name": "Free Code Camp Projects",
-            "image": [
-                [
-                    "assets/images/projects/randomQuote-small.png",
-                    "assets/images/projects/randomQuote-med.png",
-                    "assets/images/projects/randomQuote.png"
-                ],
-                [
-                    "assets/images/projects/wikiViewer-small.jpg",
-                    "assets/images/projects/wikiViewer-med.jpg",
-                    "assets/images/projects/wikiViewer.jpg"
-                ]
-            ],
-            "altText": "Photos of a displayed quote and a Wikipedia search result",
-            "description": "Projects created while working through the Free Code Camp curriculum. Through these projects, I first experienced pulling data from API's & started learning more about styling and testing. During Hactoberfest in 2017 I also improved some of the documentation for Free Code Camp's weather API source.",
-            "tech": "HTML, CSS, JS",
-            "siteLink": "",
-            "codeLink": "https://codepen.io/collection/nRGemQ/"
-        }
-    ],
-    "certificates": [
-        {
-            "class": "Mobile Web Specialist - Udacity / Grow with Google",
-            "cert": [
-                "assets/images/certificates/MWS_Certificate-small.png",
-                "assets/images/certificates/MWS_Certificate-med.png",
-                "assets/images/certificates/MWS_Certificate.png"
-            ], 
-            "certLink": "https://confirm.udacity.com/QKVT6DQY"
-        },
-        {
-            "class": "Git a Web Developer Job - Udemy",
-            "cert": [
-                "assets/images/certificates/GitWebDev_Certificate-small.png",
-                "assets/images/certificates/GitWebDev_Certificate-med.png",
-                "assets/images/certificates/GitWebDev_Certificate.png"
-            ], 
-            "certLink": "https://www.udemy.com/certificate/UC-QP5JLWR6/"
-        },
-        {
-            "class": "Learn Node - Wes Bos",
-            "cert": [
-                "assets/images/certificates/Learn_Node_Certificate-small.png",
-                "assets/images/certificates/Learn_Node_Certificate-med.png",
-                "assets/images/certificates/Learn_Node_Certificate.png"
-            ], 
-            "certLink": "https://learnnode.com/"
-        },
-        {
-            "class": "CS50 - EdX / HarvardX",
-            "cert": [
-                "assets/images/certificates/HarvardX_CS50_Certificate-small.png",
-                "assets/images/certificates/HarvardX_CS50_Certificate-med.png",
-                "assets/images/certificates/HarvardX_CS50_Certificate.png"
-            ], 
-            "certLink": "https://courses.edx.org/certificates/e5de27ef4cca4ab9b953ea7af8932ee9"
-        }
-    ]
+  "projects": [
+    {
+      "name": "Restaurant Reviews",
+      "image": [
+        [
+          "assets/images/projects/restaurantReviews-small.png",
+          "assets/images/projects/restaurantReviews-med.png",
+          "assets/images/projects/restaurantReviews.png"
+        ]
+      ],
+      "altText": "Photo of Restaurant Reviews Website, showing a bar with restaurant filters above information cards for three restaurants",
+      "description": "An application created during the Grow with Google / Udacity Mobile Web Specialist Nanodegree course. This site allows users to favorite a restaurant & add reviews, as well as filter by food type or location. During the course, each project built on top of the previous one, improving the site each time to ensure it was responsive to different screen sizes and caches the necessary information to work offline once a user has visited a page.",
+      "tech": "HTML, CSS, JS, Service Workers, IndexedDB / idb",
+      "siteLink": "https://mws-reviews-app-lt.netlify.com/",
+      "codeLink": "https://github.com/lindakatcodes/mws-restaurant-project"
+    },
+    {
+      "name": "Stamp Inventory",
+      "image": [
+        [
+          "assets/images/projects/stampTracker-small.png",
+          "assets/images/projects/stampTracker-med.png",
+          "assets/images/projects/stampTracker.png"
+        ]
+      ],
+      "altText": "Photo showing a database of stamp part names and their current quantities",
+      "description": "A site created to show the current inventory for self-inking stamp supplies. Using a Google Spreadsheet as the database, the user can use a form to update when supplies are used or received. If an item falls below the quantity threshold, the background of that box will turn red.",
+      "tech": "HTML, CSS, JS, Google Sheets API",
+      "siteLink": "https://drive.google.com/open?id=1f8X0eCXDhnrG89FgEAn5r-kL5IbXwxfm",
+      "codeLink": "https://github.com/lindakatcodes/StampInventory"
+    },
+    {
+      "name": "Daily CSS Images",
+      "image": [
+        [
+          "assets/images/projects/cssHobbes-small.png",
+          "assets/images/projects/cssHobbes-med.png",
+          "assets/images/projects/cssHobbes.png"
+        ],
+        [
+          "assets/images/projects/cssElephant-small.png",
+          "assets/images/projects/cssElephant-med.png",
+          "assets/images/projects/cssElephant.png"
+        ]
+      ],
+      "altText": "Photos of a tiger and elephant drawn with CSS",
+      "description": "Images created using CSS, following prompts from a daily email. Through working on these drawings, I started to learn more about positioning items with CSS, as well as flexing the creative side of my mind.",
+      "tech": "HTML, CSS",
+      "siteLink": "",
+      "codeLink": "https://codepen.io/collection/nmzkYx/"
+    },
+    {
+      "name": "Free Code Camp Projects",
+      "image": [
+        [
+          "assets/images/projects/randomQuote-small.png",
+          "assets/images/projects/randomQuote-med.png",
+          "assets/images/projects/randomQuote.png"
+        ],
+        [
+          "assets/images/projects/wikiViewer-small.jpeg",
+          "assets/images/projects/wikiViewer-med.jpeg",
+          "assets/images/projects/wikiViewer.jpg"
+        ]
+      ],
+      "altText": "Photos of a displayed quote and a Wikipedia search result",
+      "description": "Projects created while working through the Free Code Camp curriculum. Through these projects, I first experienced pulling data from API's & started learning more about styling and testing. During Hactoberfest in 2017 I also improved some of the documentation for Free Code Camp's weather API source.",
+      "tech": "HTML, CSS, JS",
+      "siteLink": "",
+      "codeLink": "https://codepen.io/collection/nRGemQ/"
+    }
+  ],
+  "certificates": [
+    {
+      "class": "Complete Node Developer Course",
+      "cert": [
+        "assets/images/certificates/CompleteNodeCourse_Certificate-small.png",
+        "assets/images/certificates/CompleteNodeCourse_Certificate-med.png",
+        "assets/images/certificates/CompleteNodeCourse_Certificate.png"
+      ]
+    },
+    {
+      "class": "Mobile Web Specialist - Udacity / Grow with Google",
+      "cert": [
+        "assets/images/certificates/MWS_Certificate-small.png",
+        "assets/images/certificates/MWS_Certificate-med.png",
+        "assets/images/certificates/MWS_Certificate.png"
+      ],
+      "certLink": "https://confirm.udacity.com/QKVT6DQY"
+    },
+    {
+      "class": "Git a Web Developer Job - Udemy",
+      "cert": [
+        "assets/images/certificates/GitWebDev_Certificate-small.png",
+        "assets/images/certificates/GitWebDev_Certificate-med.png",
+        "assets/images/certificates/GitWebDev_Certificate.png"
+      ],
+      "certLink": "https://www.udemy.com/certificate/UC-QP5JLWR6/"
+    },
+    {
+      "class": "Learn Node - Wes Bos",
+      "cert": [
+        "assets/images/certificates/Learn_Node_Certificate-small.png",
+        "assets/images/certificates/Learn_Node_Certificate-med.png",
+        "assets/images/certificates/Learn_Node_Certificate.png"
+      ],
+      "certLink": "https://learnnode.com/"
+    },
+    {
+      "class": "CS50 - EdX / HarvardX",
+      "cert": [
+        "assets/images/certificates/HarvardX_CS50_Certificate-small.png",
+        "assets/images/certificates/HarvardX_CS50_Certificate-med.png",
+        "assets/images/certificates/HarvardX_CS50_Certificate.png"
+      ],
+      "certLink": "https://courses.edx.org/certificates/e5de27ef4cca4ab9b953ea7af8932ee9"
+    }
+  ]
 }

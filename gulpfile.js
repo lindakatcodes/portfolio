@@ -50,14 +50,12 @@ function resizeImages(cb) {
             width: 800,
             rename: {
                 suffix: '-med',
-                extname: '.jpg'
             },
             withoutEnlargement: false
         },{
             width: 420,
             rename: {
                 suffix: '-small',
-                extname: '.jpg'
             },
             withoutEnlargement: false
         }]
@@ -65,7 +63,6 @@ function resizeImages(cb) {
             errorOnEnlargement: false
         }
     ))
-    .pipe(reduceImg())
     .pipe(dest('./docs/assets/images'))
     cb();
 }
