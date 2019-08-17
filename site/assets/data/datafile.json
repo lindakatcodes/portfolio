@@ -78,7 +78,8 @@
         "assets/images/certificates/CompleteNodeCourse_Certificate-small.png",
         "assets/images/certificates/CompleteNodeCourse_Certificate-med.png",
         "assets/images/certificates/CompleteNodeCourse_Certificate.png"
-      ]
+      ],
+      "certLink": "https://www.udemy.com/the-complete-nodejs-developer-course-2/"
     },
     {
       "class": "Mobile Web Specialist - Udacity / Grow with Google",
