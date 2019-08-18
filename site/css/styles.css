@@ -14,6 +14,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Arimo";
+  src: "https://fonts.googleapis.com/css?family=Arimo&display=swap";
+}
+
+@font-face {
+  font-family: "David Libre";
+  src: "https://fonts.googleapis.com/css?family=David+Libre&display=swap";
+}
+
 /* Overall styles - Starting points */
 html {
     background-color: var(--softGray);

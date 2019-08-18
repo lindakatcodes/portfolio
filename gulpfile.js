@@ -56,6 +56,7 @@ function resizeImages(cb) {
             width: 420,
             rename: {
                 suffix: '-small',
+                extname: 'webp'
             },
             withoutEnlargement: false
         }]
