@@ -58,7 +58,14 @@ function resizeImages(cb) {
                 suffix: '-small'
             },
             withoutEnlargement: false
-        }]
+        },
+        {
+          width: 200,
+          rename: {
+              suffix: '-tiny'
+          },
+          withoutEnlargement: false
+      }]
     }, {
             errorOnEnlargement: false
         }

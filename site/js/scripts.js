@@ -40,10 +40,11 @@ const results = fetch(dataURL)
       pImages.forEach(image => {
         const thisImg = document.createElement('img');
         thisImg.srcset = `
-        ${image[0]} 420w,
-        ${image[1]} 800w,
-        ${image[2]}`;
-        thisImg.src = image[2];
+        ${image[0]} 200w,
+        ${image[1]} 420w,
+        ${image[2]} 800w,
+        ${image[3]} 1020w`;
+        thisImg.src = image[3];
         thisImg.alt = project.altText;
         thisImg.sizes = `(max-width: 420px) 90vw, (max-width: 800px) 50vw, 40vw`;
         pimgs.append(thisImg);
@@ -105,10 +106,11 @@ const results = fetch(dataURL)
 
       const cImg = document.createElement('img');
       cImg.srcset = `
-      ${cert.cert[0]} 420w,
-      ${cert.cert[1]} 800w,
-      ${cert.cert[2]}`;
-      cImg.src = cert.cert[2];
+      ${cert.cert[0]} 200w,
+      ${cert.cert[1]} 420w,
+      ${cert.cert[2]} 800w,
+      ${cert.cert[3]} 1020w`;
+      cImg.src = cert.cert[3];
       cImg.alt = `${cert.class} course completion certificate`;
       cImg.sizes = `(max-width: 420px) 90vw, (max-width: 800px) 50vw, 40vw`;
 
