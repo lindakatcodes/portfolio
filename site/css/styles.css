@@ -261,31 +261,32 @@ section {
   color: var(--softGray);
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-rows: 10% 1fr 0.5fr 10%;
   grid-gap: 2% 1%;
 }
 
 .about-title {
-  grid-row: 1;
   grid-column: 1 / span 2;
+  grid-row: 1;
   text-decoration: underline var(--mainGreen);
 }
 
 .about-photo {
-  grid-row: 2 / 3;
-  grid-column: 1; 
+  grid-column: 1;
+  grid-row: 2;
   margin-left: 4%;
   border-radius: 25px;
   max-width: 35vw;
 }
 
 .about-text {
-  grid-row: 2;
   grid-column: 2;
-  width: 95%;
+  grid-row: 2;
+  margin-right: 6%;
   font-size: 1.1rem;
 }
 
-.about-text p {
+.about-section p {
   margin: 0;
   padding-bottom: 3%;
   padding-left: 2%;
@@ -293,8 +294,15 @@ section {
 
 .about-headers {
   padding-bottom: 1%;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-decoration: underline var(--mainBlue);
+}
+
+.about-interests {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+  margin: 0 auto;
+  display: flex;
 }
 
 .green {
@@ -316,8 +324,10 @@ section {
 }
 
 .end-line {
-  padding-top: 3%;
-  padding-left: 0;
+  grid-column: 1 / span 2;
+  grid-row: 4;
+  font-size: 1.4em;
+  padding: 1% 0;
 }
 
 /* Contact Styles */

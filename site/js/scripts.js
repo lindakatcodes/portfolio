@@ -1,15 +1,16 @@
 // Load in projects once page is ready
-document.addEventListener('DOMContentLoaded', () => results);
-
-// address for projects/certificates
-const dataURL = `https://www.lindakat.com/assets/data/datafile.json` || `http://localhost:8080/assets/data/datafile.json`;
+document.addEventListener('DOMContentLoaded', () => getResults());
 
 // Save the project & certificate sections from the HTML
 const projectDiv = document.querySelector('.project-section');
 const certDiv = document.querySelector('.certs');
 
+// set address for projects/certificates data
+let dataURL = `https://www.lindakat.com/assets/data/datafile.json`;
+
 /* Grab data from the datafile and display on site */
-const results = fetch(dataURL)
+function getResults() {
+ fetch(dataURL)
   .then(res => res.json())
   .then(res => {
     // First - projects
@@ -125,4 +126,10 @@ const results = fetch(dataURL)
 
       certDiv.append(cFig);
       })
-  });
+  })
+  .catch(e => {
+    // if here, developing locally so call the local datafile instead
+    dataURL = `http://localhost:8080/assets/data/datafile.json`;
+    getResults();
+  })
+}
