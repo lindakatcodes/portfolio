@@ -2,20 +2,11 @@
 <html lang="en">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101595133-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-101595133-2');
-  </script>
   <!-- Meta tags -->
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="The personal portfolio page for Linda Thompson, showcasing her web development skills.">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Arimo|David+Libre" rel="stylesheet">
+  <!-- Google Fonts 
+  <link href="https://fonts.googleapis.com/css?family=Arimo|David+Libre" rel="stylesheet"> -->
   <!-- CSS stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
   <title>Linda Thompson's Portfolio Site</title>
@@ -45,31 +36,49 @@
     </section>
     <section class="about-section">
       <h2 class="about-title section-title">Awesome! What else should we know about you?</h2>
-      <img srcset="assets/images/portrait/portrait-july192-small.jpeg 420w, assets/images/portrait/portrait-july192-med.jpeg 800w, assets/images/portrait/portrait-july192.jpg 1020w" sizes="(max-width: 420px) 50vw,
+      <img srcset="assets/images/portrait/portrait-july192-tiny.jpeg 200w, assets/images/portrait/portrait-july192-small.jpeg 420w, assets/images/portrait/portrait-july192-med.jpeg 800w, assets/images/portrait/portrait-july192.jpg 1020w" sizes="(max-width: 420px) 50vw,
         (max-width: 800px) 40vw, 30vw" src="assets/images/portrait/portrait-july192.jpg" alt="Photo of Linda Thompson" class="about-photo">
       <div class="about-text">
         <h3 class="about-headers">Who I Am</h3>
         <p>
-          I'm an intelligent, hard working person, with 12+ years of experience managing client projects and helping offices run smoothly. I excel at investigating problems, verifying the details of a project and finding solutions that work for everyone. With an inquisitive, resilient mind, I'm always open to learning, growing, and improving. I enjoy exploring data, making art, and bringing ideas to life.
-          <br><br>
-          I also love cats, chocolate, puzzles, gaming, and stories of all kinds (whether from video games, podcasts, or books)!
+          Hi! I'm Linda. I love organizing, proof reading, and digging into details to solve puzzles. Whether that's figuring out why a customer account doesn't balance out, or where a bug in my code is and why it's acting the way it is, investigating and resolving issues is one of my favorite things. 
+
+          I also love playing with data! Analytics and spreadsheets are my jam. (I've even taken a course on baseball stats, and while I couldn't tell you what all of them mean, the fact that there's so much you can track always amazes me.) 
+
+          One of my favorite parts of my job is getting to bring ideas to life. No matter the scale, being able to see something take shape, change, and go out into the world is such a joy. 
         </p>
         <h3 class="about-headers green">My Goals</h3>
         <p>
-          I'm currently looking for my first developer job!
+          <strong>I'm searching for my first developer job!</strong>
           <br><br>
-          I really enjoy working with JavaScript, wrangling data, and designing websites. I'm fairly confident in my front-end skills, though I possess just enough back-end skill to be dangerous! I'd really love to work on location (<i>looking to relocate!</i>), where I can be truly immersed in programming and be able to learn and grow with my teammates - though I'd happily work remote as well. I'm not looking to be <i>the</i> best - just continuously better than I am in this moment.
+          I really enjoy working with JavaScript, wrangling data, and playing with design. I'd really love to work on location (<i>looking to relocate!</i>), where I can be truly immersed in programming and be able to learn and grow with my teammates - though I'd happily work remote as well. If you're in need of a resilient, open, enjoyable programmer - please let me know!
+          <br><br>
+          I'm not looking to be <i>the</i> best - just continuously better than I am in this moment.
         </p>
+        <h3 class="about-headers">Personal Interests</h3>
+          <ul class="list">
+            <li>I <strong>LOVE</strong> a good story!</li>
+            <li>Video Games - Ratchet & Clank, Sly Cooper, Uncharted, Kingdom Hearts</li>
+            <li>Books - The Phantom Tollbooth, Neverwhere, American Gods</li>
+            <li>Podcasts - 
+              <ul class="list">
+                <li>Fictional - Ars Paradoxica, Wolf359, The Bright Sessions, Archive 81</li>
+                <li>Programming - BaseCS, Syntax, Shop Talk Show, Code Newbie, Front End Happy Hour, The Ladybug Podcast</li>
+                <li>True Crime - And That's Why We Drink, Small Town Murder, Wine & Crime</li>
+              </ul>
+            </li>
+            <li>Cats! I have three currently: Tomorah, Griefer, & Pip</li>
+            <li>Any sort of chocolate (though fudge is my ultimate weakness)</li>
+            <li>Baseball (particularly the Texas Rangers!)</li>
+            <li>The Beach! (Or any body of water, really - but the ocean has my heart)</li>
+          </ul>
         <h3 class="about-headers">Currently Learning</h3>
-        <ul class="learning-list">
+        <ul class="list">
           <li>
-            - Now that I have some increased knowledge, I want to refactor some of my small side projects that I use at my current job - my stamp tracker, and a delivery record form. After using both for a decent while now, I have some improvements I want to make to help them fit their use cases better. 
+            <a href="https://es6.io/" target="_blank" rel="noreferrer">ES6 for Everyone</a> - Finally working through this course fully. I use some ES6 features all the time (hello template strings!), but some things - like destructuring, spread, and rest - I still don't fully understand. So diving into all of this will be a great help.
           </li>
           <li>
-            <a href="https://egghead.io/courses/data-structures-and-algorithms-in-javascript" target="_blank" rel="noreferrer">Data Structures & Algorithms in JavaScript</a> - Brushing up on my understanding and ability to implement different CS ideas in JavaScript.
-          </li>
-          <li>
-            <a href="https://es6.io/" target="_blank" rel="noreferrer">ES6 for Everyone</a> - Also finally working through this course fully. I use some ES6 features all the time (hello template strings!), but some things - like destructuring, spread, and rest - I still don't fully understand. So diving into all of this will be a great help.
+            Technical writing! I want to blog more for myself and others - I know there are aspects of programming and the path of learning that can be helpful to read from multiple perspectives, and I love to write. So whether it's writing about my understanding of a term or algorithm, struggles while walking this path, or successes and helpful hints for my future self, I want to share these moments with whoever wants to read them (even if no one does!).
           </li>
         </ul>
         <p class="end-line">
@@ -129,7 +138,7 @@
           </figure>
         </a>
 
-        <a href="https://drive.google.com/open?id=1EE8GBzD9HZqJbNK0wYJqY6CF66AuqezQ" rel="noreferrer" target="_blank" tooltip="resume">
+        <a href="https://drive.google.com/open?id=1Mf5LhCZQIgHgSfvlVylDbV4ST45AJk7Z" rel="noreferrer" target="_blank" tooltip="resume">
           <figure>
             <img src="assets/icons/file-pdf.svg" alt="Resume icon">
             <figcaption>Resume</figcaption>

@@ -301,16 +301,16 @@ section {
   text-decoration: underline var(--mainGreen);
 }
 
-.learning-list {
+.list {
   margin-top: 0;
   list-style-image: url('../assets/icons/level-up-alt.svg');
 }
 
-.learning-list li {
+.list li {
   margin-bottom: 1.5%;
 }
 
-.learning-list a {
+.list a {
   color: var(--textGreen);
   text-decoration: underline var(--mainBlue);
 }
