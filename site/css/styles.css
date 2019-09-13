@@ -325,11 +325,17 @@ section {
 
 .list {
   margin-top: 0;
-  list-style-image: url('../assets/icons/level-up-alt.svg');
+  list-style-type: none;
 }
 
 .list li {
   margin-bottom: 1.5%;
+}
+
+.list li::before {
+  content: '\10E6';
+  margin: 0 0.5em;
+  font-size: 1.7em;
 }
 
 .list a {

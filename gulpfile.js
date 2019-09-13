@@ -114,7 +114,7 @@ function watcher() {
 }
 
 // exports / task names
-exports.prepImages = series(cleanImages, parallel(resizeImages, copyPhotos));
+exports.prepImages = series(cleanImages, parallel(resizeImages, copyPhotos, copyIcons));
 
 exports.prepFiles = series(cleanDistFiles, parallel(prepHTML, prepCSS, prepJS, prepData));
 
