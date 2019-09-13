@@ -261,8 +261,8 @@ section {
   color: var(--softGray);
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 10% 1fr 0.5fr 10%;
-  grid-gap: 2% 1%;
+  grid-template-rows: 10% 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-gap: 1.5% 1%;
 }
 
 .about-title {
@@ -273,17 +273,10 @@ section {
 
 .about-photo {
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 2 / 5;
   margin-left: 4%;
   border-radius: 25px;
   max-width: 35vw;
-}
-
-.about-text {
-  grid-column: 2;
-  grid-row: 2;
-  margin-right: 6%;
-  font-size: 1.1rem;
 }
 
 .about-section p {
@@ -293,15 +286,36 @@ section {
 }
 
 .about-headers {
-  padding-bottom: 1%;
+  padding-bottom: 1.5%;
   font-size: 1.6rem;
   text-decoration: underline var(--mainBlue);
 }
 
+.about-text {
+  margin-right: 5%;
+  font-size: 1.2rem;
+}
+
+.about-info {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.about-goals {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.about-learn {
+  grid-column: 2;
+  grid-row: 4;
+}
+
 .about-interests {
   grid-column: 1 / span 2;
-  grid-row: 3;
-  margin: 0 auto;
+  grid-row: 5;
+  margin: 2% auto 0;
+  padding-bottom: 2%;
   display: flex;
 }
 
@@ -321,13 +335,6 @@ section {
 .list a {
   color: var(--textGreen);
   text-decoration: underline var(--mainBlue);
-}
-
-.end-line {
-  grid-column: 1 / span 2;
-  grid-row: 4;
-  font-size: 1.4em;
-  padding: 1% 0;
 }
 
 /* Contact Styles */
@@ -426,6 +433,16 @@ section {
   .contact-info img {
     width: 5.5vw;
   }
+
+  .about-interests {
+    padding: 0 2% 3%;
+  }
+
+  .about-learn {
+    display: flex;
+    grid-column: 1 / span 2;
+    padding: 0 2%;
+  }
 }
 
 @media screen and (max-width: 801px) {
@@ -499,16 +516,12 @@ section {
     margin: 0 4% 1% 2%;
   }
 
-  .about-text {
-    width: 85%;
-    padding: 0;
-    margin-left: 2%;
-    font-size: 1rem;
+  .about-interests, .about-learn {
+    flex-flow: column;
   }
 
-  .about-text p {
-    padding: 0 0 3% 0;
-    margin-right: -3%;
+  .about-interests {
+    padding-bottom: 1%;
   }
 
   .contact-info img {
@@ -551,11 +564,9 @@ section {
     margin: 0 30% 3%;
   }
 
-  .about-text {
-    margin: 0 auto;
+  .about-headers {
+    padding: 6% 0 3%;
   }
-
-  
 }
 
 @media screen and (max-width: 376px) {
