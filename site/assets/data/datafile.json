@@ -1,6 +1,46 @@
 {
   "projects": [
     {
+      "name": "Advent of Code",
+      "image": [
+        [
+          "assets/images/projects/AoC2017-small.png",
+          "assets/images/projects/AoC2017-med.png",
+          "assets/images/projects/AoC2017.png"
+        ],
+        [
+          "assets/images/projects/AoC2016-small.png",
+          "assets/images/projects/AoC2016-med.png",
+          "assets/images/projects/AoC2016.png"
+        ]
+      ],
+      "altText": "Advent of Code maps for different years",
+      "description": "Advent of Code is a daily puzzle game that happens every December. Each year, there's usually some problems that deal with mapping, sorting, or searching problem sets, and each year's map creates a different picture. The puzzles are always challenging and feel so good to complete! And the community is super helpful and friendly. I haven't been able to complete 2019's yet, but I plan to!",
+      "tech": "JS",
+      "siteLink": "https://adventofcode.com",
+      "codeLink": "https://github.com/lindakatcodes/adventOfCode-JavaScript"
+    },
+    {
+      "name": "Complete Node Developer Course",
+      "image": [
+        [
+          "assets/images/projects/chatroom-small.png",
+          "assets/images/projects/chatroom-med.png",
+          "assets/images/projects/chatroom.png"
+        ],
+        [
+          "assets/images/projects/cnd-weather-small.png",
+          "assets/images/projects/cnd-weather-med.png",
+          "assets/images/projects/cnd-weather.png"
+        ]
+      ],
+      "altText": "A simple chat room and weather descriptor project images",
+      "description": "Projects created while working through the Complete Node Developer course on Udemy. I got a lot of practice writing Node during this course, as well as working with Express, MongoDB, Mongoose, Postman, Socket.io, and Heroku. There were a total of 4 projects, though only two had front ends created during the course.",
+      "tech": "HTML, CSS, JS, MongoDB, Node",
+      "siteLink": "",
+      "codeLink": "https://github.com/lindakatcodes/node-course-files"
+    },
+    {
       "name": "Restaurant Reviews",
       "image": [
         [
