@@ -18,7 +18,8 @@
       "description": "Advent of Code is a daily puzzle game that happens every December. Each year, there's usually some problems that deal with mapping, sorting, or searching problem sets, and each year's map creates a different picture. The puzzles are always challenging and feel so good to complete! And the community is super helpful and friendly. I haven't been able to complete 2019's yet, but I plan to!",
       "tech": "JS",
       "siteLink": "https://adventofcode.com",
-      "codeLink": "https://github.com/lindakatcodes/adventOfCode-JavaScript"
+      "codeLink": "https://github.com/lindakatcodes/adventOfCode-JavaScript",
+      "multiPicType": "tall"
     },
     {
       "name": "Complete Node Developer Course",
@@ -36,9 +37,10 @@
       ],
       "altText": "A simple chat room and weather descriptor project images",
       "description": "Projects created while working through the Complete Node Developer course on Udemy. I got a lot of practice writing Node during this course, as well as working with Express, MongoDB, Mongoose, Postman, Socket.io, and Heroku. There were a total of 4 projects, though only two had front ends created during the course.",
-      "tech": "HTML, CSS, JS, MongoDB, Node",
+      "tech": "Node, MongoDB, Express, JS, HTML, CSS",
       "siteLink": "",
-      "codeLink": "https://github.com/lindakatcodes/node-course-files"
+      "codeLink": "https://github.com/lindakatcodes/node-course-files",
+      "multiPicType": "wide"
     },
     {
       "name": "Restaurant Reviews",
@@ -88,7 +90,8 @@
       "description": "Images created using CSS, following prompts from a daily email. Through working on these drawings, I started to learn more about positioning items with CSS, as well as flexing the creative side of my mind.",
       "tech": "HTML, CSS",
       "siteLink": "",
-      "codeLink": "https://codepen.io/collection/nmzkYx/"
+      "codeLink": "https://codepen.io/collection/nmzkYx/",
+      "multiPicType": "tall"
     },
     {
       "name": "Free Code Camp Projects",
@@ -108,7 +111,8 @@
       "description": "Projects created while working through the Free Code Camp curriculum. Through these projects, I first experienced pulling data from API's & started learning more about styling and testing. During Hactoberfest in 2017 I also improved some of the documentation for Free Code Camp's weather API source.",
       "tech": "HTML, CSS, JS",
       "siteLink": "",
-      "codeLink": "https://codepen.io/collection/nRGemQ/"
+      "codeLink": "https://codepen.io/collection/nRGemQ/",
+      "multiPicType": "wide"
     }
   ],
   "certificates": [

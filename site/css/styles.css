@@ -161,7 +161,6 @@ section {
   width: 40vw;
   height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -172,7 +171,16 @@ section {
   object-fit: contain;
 }
 
-.multi-img img {
+.tall img {
+  max-width: 50%;
+  padding: 0 0.5%;
+}
+
+.wide {
+  flex-direction: column;
+}
+
+.wide img {
   max-height: 50%;
   padding: 0.5% 0;
 }
@@ -339,7 +347,7 @@ section {
 }
 
 .list li::before {
-  content: '\10E6';
+  content: '»';
   margin: 0 0.5em;
   font-size: 1.7em;
 }
@@ -489,7 +497,7 @@ section {
 
   .project-block {
     grid-template-columns: 1fr;
-    grid-template-rows: 7% 50% 25% 7% 11%;
+    grid-template-rows: 10% 50% 25% 5% 10%;
     grid-column-gap: 0;
     width: 85vw;
     height: 128vh;
@@ -575,6 +583,19 @@ section {
     width: 6vw;
   }
 
+  .tall {
+    flex-direction: column;
+  }
+
+  .tall img {
+    max-height: 50%;
+    padding: 0.5% 0;
+  }
+
+  .project-desc {
+    padding: 0 4%;
+  }
+
   .contact-info img {
     padding: 0;
     width: 12vw;
@@ -617,10 +638,6 @@ section {
 
   .project-name {
     font-size: 1.5rem;
-  }
-
-  .project-desc {
-    padding: 0 4%;
   }
 
   .project-links a {

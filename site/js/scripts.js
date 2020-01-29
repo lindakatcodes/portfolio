@@ -34,7 +34,11 @@ function getResults() {
       
       // if there's more than 1 image, add a special class name for styling purposes
       if (pImages.length > 1) {
-        pimgs.classList.add('multi-img');
+        if (project.multiPicType === 'tall') {
+          pimgs.classList.add('tall')
+        } else if (project.multiPicType === 'wide') {
+          pimgs.classList.add('wide');
+        }
       }
 
       // Then, build the img tag, with srcset and alt text included
