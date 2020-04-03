@@ -45,11 +45,10 @@ function getResults() {
       pImages.forEach(image => {
         const thisImg = document.createElement('img');
         thisImg.srcset = `
-        ${image[0]} 200w,
-        ${image[1]} 420w,
-        ${image[2]} 800w,
-        ${image[3]} 1020w`;
-        thisImg.src = image[3];
+        ${image[0]} 420w,
+        ${image[1]} 800w,
+        ${image[2]} 1020w`;
+        thisImg.src = image[2];
         thisImg.alt = project.altText;
         thisImg.sizes = `(max-width: 420px) 90vw, (max-width: 800px) 50vw, 40vw`;
         pimgs.append(thisImg);
